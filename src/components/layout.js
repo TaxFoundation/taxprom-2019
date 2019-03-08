@@ -8,8 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
 
+import Theme from '../Theme';
 import Header from '../sections/Header';
 
 const Layout = ({ children }) => (
@@ -24,6 +26,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
+      <ThemeProvider theme={Theme}>
       <>
         <Reset />
         <Header></Header>
@@ -33,6 +36,7 @@ const Layout = ({ children }) => (
           </footer>
         </div>
       </>
+      </ThemeProvider>
     )}
   />
 )
