@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tax Prom 2019`,
+    description: `Celebrating 82 Years of Promoting Better Tax Policy`,
+    author: `@taxfoundation`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -24,7 +24,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#0094ff`,
         theme_color: `#0094ff`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/tf-logo.png`,
         include_favicon: true,
       },

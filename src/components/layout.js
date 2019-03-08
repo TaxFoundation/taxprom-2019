@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import { Reset } from 'styled-reset';
 
-import Header from "./header"
+import Header from '../sections/Header';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,6 +26,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Reset />
+        <Header></Header>
         <div>
           <main>{children}</main>
           <footer>
