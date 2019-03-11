@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import scrollToElement from 'scroll-to-element';
 import { Link } from 'gatsby';
@@ -82,54 +82,48 @@ const StyledLink = styled(Link)`
   }
 `;
 
-class Header extends Component {
-  constructor() {
-    super();
+const Header = () => {
+  const [menu, setMenu] = useState(false);
+  const [color, setColor] = useState(false);
 
-    this.state = {
-      showMenu: false,
-    };
+  useEffect(() => {
+    if (window.scrollY > 30) {
+      setColor(true);
+    } else if (color && window.scrollY <= 30) {
+      setColor(false);
+    }
+  }, [window.scrollY]);
 
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-  toggleMenu() {
-    const menu = !this.state.showMenu;
-    this.setState({ showMenu: menu });
-  }
-
-  goToSection(id) {
+  const goToSection = id => {
     scrollToElement(document.getElementById(id), { offset: -56 });
-    this.toggleMenu();
-  }
+    setMenu(!menu);
+  };
 
-  render() {
-    return (
-      <StyledHeader backgroundColor={!this.props.transparent}>
-        <LogoLink href="https://taxfoundation.org">
-          <Logo fill="#fff" />
-        </LogoLink>
-        <MenuLink onClick={this.toggleMenu}>
-          <MenuIcon fill="#fff" />
-        </MenuLink>
-        <Menu show={this.state.showMenu}>
-          <CloseLink onClick={this.toggleMenu}>
-            <CloseIcon />
-          </CloseLink>
-          {/* {this.props.routes.map(r => {
-            return r.show ? (
-              <StyledLink key={`nav-${r.slug}`} to={`/${r.slug}`} onClick={e => this.goToSection(r.slug)}>
-                {r.name}
-              </StyledLink>
-            ) : null;
-          })} */}
-          <StyledLink to="/contact" onClick={this.toggleMenu}>
-            Contact
-          </StyledLink>
-        </Menu>
-      </StyledHeader>
-    );
-  }
-}
+  return (
+    <StyledHeader backgroundColor={color}>
+      <LogoLink href="https://taxfoundation.org">
+        <Logo fill="#fff" />
+      </LogoLink>
+      <MenuLink onClick={() => setMenu(!menu)}>
+        <MenuIcon fill="#fff" />
+      </MenuLink>
+      <Menu show={menu}>
+        <CloseLink onClick={() => setMenu(!menu)}>
+          <CloseIcon />
+        </CloseLink>
+        {/* {this.props.routes.map(r => {
+          return r.show ? (
+            <StyledLink key={`nav-${r.slug}`} to={`/${r.slug}`} onClick={e => this.goToSection(r.slug)}>
+              {r.name}
+            </StyledLink>
+          ) : null;
+        })} */}
+        <StyledLink to="/contact" onClick={() => setMenu(!menu)}>
+          Contact
+        </StyledLink>
+      </Menu>
+    </StyledHeader>
+  );
+};
 
 export default Header;
