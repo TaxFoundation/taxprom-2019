@@ -5,13 +5,14 @@ const SponsorLevel = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template: repeat(3, auto) 1fr / auto;
-  padding: 1.4rem 1.6rem 1rem;
+  padding: 2rem 3rem;
 
   .sponsorship__title,
   .sponsorship__price {
     line-height: 1;
     margin: 0;
     text-align: center;
+    text-transform: uppercase;
   }
 
   .sponsorship__title {
@@ -24,9 +25,10 @@ const SponsorLevel = styled.div`
   }
 
   .sponsorship__benefits {
+    align-content: start;
     display: grid;
     font-size: 1rem;
-    grid-gap: 0.7rem;
+    grid-gap: 1rem;
     line-height: 1.3;
     margin: 0 auto 1rem;
     padding: 0 2rem;
@@ -38,7 +40,9 @@ const SponsorLevel = styled.div`
     color: ${props => props.theme[props.bg]};
     cursor: pointer;
     display: block;
-    font-size: 1rem;
+    font-family: ${props => props.theme.fontFamilies.baskerville};
+    font-size: 1.2rem;
+    font-style: italic;
     line-height: 1.6;
     padding: 0.6rem;
     text-align: center;

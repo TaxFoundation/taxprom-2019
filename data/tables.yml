@@ -2,7 +2,7 @@
   earlyPrice: 25000
   regularPrice: 30000
   latePrice: 35000
-  bg: yellow
+  bg: blueLight
   color: blueDark
   benefits:
     - "One large table (10 tickets) with preferred seating"
@@ -20,7 +20,7 @@
   earlyPrice: 15000
   regularPrice: 20000
   latePrice: 22000
-  bg: blueLight
+  bg: yellow
   color: blueDark
   benefits:
     - "One large table (10 tickets) with preferred seating"
@@ -52,7 +52,7 @@
   earlyPrice: 8000
   regularPrice: 10000
   latePrice: 10000
-  bg: blueDark
+  bg: blue
   color: white
   benefits:
     - "Half-Table (4 tickets)"

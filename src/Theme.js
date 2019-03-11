@@ -9,7 +9,7 @@ const palette = {
 const Theme = {
   borderColor: '#333',
   fontFamilies: {
-    lato: 'font-family: lato, sans-serif; ',
+    lato: 'lato, sans-serif; ',
     proxima: 'proxima-nova, sans-serif',
     baskerville: "'Libre Baskerville', serif",
   },

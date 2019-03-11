@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   align-content: space-between;
   align-items: end;
   background-color: ${props =>
-    props.backgroundColor ? props.theme.blueDark : 'transparent'};
+    props.backgroundColor ? props.theme.black : 'transparent'};
   display: grid;
   grid-template: auto / auto 1fr auto;
   left: 0;

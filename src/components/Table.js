@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+
+import taxprom from '../../data/taxprom.json';
 import SponsorLevel from './SponsorLevel';
-import { dollars, slugify } from '../utilities/formatters';
+import { dollars, slugify, fullDate } from '../utilities/formatters';
 
 const TableBox = styled(SponsorLevel)`
   background-color: ${props => props.theme[props.bg]};
@@ -11,10 +13,21 @@ const TableBox = styled(SponsorLevel)`
 
   .sponsorship__title {
     color: ${props => props.theme[props.color]};
+    font-family: ${props => props.theme.fontFamilies.lato};
+    font-size: 4rem;
   }
 
   .sponsorship__price {
-    border-bottom: 1px solid ${props => props.theme[props.color]};
+    border: 0;
+    font-family: ${props => props.theme.fontFamilies.baskerville};
+    font-size: 1.6rem;
+    font-style: italic;
+    padding: 0;
+  }
+
+  .sponsorship__benefits {
+    border-top: 1px solid ${props => props.theme[props.color]};
+    padding-top: 1rem;
   }
 
   .sponsorship__pledge {
@@ -29,10 +42,18 @@ const TableBox = styled(SponsorLevel)`
   }
 `;
 
-const Table = ({ table, id, price }) => (
+const Table = ({ table, id, priceType }) => (
   <TableBox bg={table.bg} color={table.color}>
     <h4 className="sponsorship__title">{table.name}</h4>
-    <p className="sponsorship__price">{dollars(table[price])}</p>
+    <p className="sponsorship__price">{dollars(table[priceType])}</p>
+    {priceType !== 'latePrice' ? (
+      <p
+        style={{ fontSize: '0.8rem', fontStyle: 'italic', textAlign: 'center' }}
+      >
+        Price will increase after{' '}
+        {fullDate(new Date(taxprom[`${priceType}Ends`]))}.
+      </p>
+    ) : null}
     <ul className="sponsorship__benefits">
       {table.benefits.map((b, i) => (
         <li key={`${id}-${i}`}>{b}</li>
@@ -50,7 +71,7 @@ const Table = ({ table, id, price }) => (
 Table.propTypes = {
   table: PropTypes.object,
   id: PropTypes.string,
-  price: PropTypes.number,
+  priceType: PropTypes.number,
 };
 
 export default Table;

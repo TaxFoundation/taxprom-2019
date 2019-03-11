@@ -10,7 +10,7 @@ import taxprom from '../../data/taxprom.json';
 
 const Container = styled.div`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding-bottom: 1rem;

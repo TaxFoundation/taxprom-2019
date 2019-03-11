@@ -10,7 +10,7 @@ import taxprom from '../../data/taxprom.json';
 
 const Container = styled.div`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding-bottom: 1rem;
@@ -49,7 +49,7 @@ const Sponsorships = () => {
 
   return (
     <div id="tables">
-      <BackgroundContainer bg="secondaryHighlight" color="primary">
+      <BackgroundContainer bg="black" color="white">
         <SectionContainer>
           <h3>Sponsorships</h3>
           <Container>
@@ -58,7 +58,7 @@ const Sponsorships = () => {
                 key={`table-${slugify(table.name)}`}
                 id={`table-${slugify(table.name)}`}
                 table={table}
-                price={priceType}
+                priceType={priceType}
               />
             ))}
           </Container>
