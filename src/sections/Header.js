@@ -48,7 +48,7 @@ const CloseLink = styled.div`
 
 const Menu = styled.div`
   align-content: start;
-  background-color: ${props => props.theme.blueDark};
+  background-color: ${props => props.theme.black};
   bottom: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -73,12 +73,13 @@ const StyledLink = styled(Link)`
   color: ${props => props.theme.blueLight};
   padding: 2rem;
   text-decoration: none;
+  transition: background 0.1s ease-in, color 0.1s ease-in;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: ${props => props.theme.yellow};
-    color: ${props => props.theme.blueLight};
+    background-color: ${props => props.theme.blue};
+    color: ${props => props.theme.white};
   }
 `;
 
