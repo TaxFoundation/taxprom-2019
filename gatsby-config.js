@@ -44,7 +44,7 @@ module.exports = {
           families: ['Libre Baskerville:400,400i,700'],
         },
         typekit: {
-          id: ' obh3hwp',
+          id: 'obh3hwp',
         },
       },
     },
