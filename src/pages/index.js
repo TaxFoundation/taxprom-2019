@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import Splash from '../sections/Splash';
 import Details from '../sections/Details';
 import Tables from '../sections/Tables';
+import Tickets from '../sections/Tickets';
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <Details details={taxprom.details} id="details" />
     {/* Awardees */}
     <Tables />
+    <Tickets />
   </Layout>
 );
 
