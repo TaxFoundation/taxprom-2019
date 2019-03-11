@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import BackgroundContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 `;
 
-const Sponsorships = ({ data }) => {
+const Sponsorships = () => {
   let priceType = 'earlyPrice';
   const now = Date.now();
   if (now > new Date(taxprom.regularPriceEnds)) {
@@ -29,44 +29,41 @@ const Sponsorships = ({ data }) => {
     priceType = 'regularPrice';
   }
 
-  return (
-    <StaticQuery
-      query={graphql`
-        query TablesQuery {
-          allTablesYaml {
-            edges {
-              node {
-                name
-                earlyPrice
-                regularPrice
-                latePrice
-                color
-                benefits
-              }
-            }
+  const data = useStaticQuery(graphql`
+    query TablesQuery {
+      allTablesYaml {
+        edges {
+          node {
+            name
+            earlyPrice
+            regularPrice
+            latePrice
+            color
+            benefits
           }
         }
-      `}
-      render={data => (
-        <div id="tables">
-          <BackgroundContainer bg="secondaryHighlight" color="primary">
-            <SectionContainer>
-              <h3>Sponsorships</h3>
-              <Container>
-                {data.allTablesYaml.edges.map(({ node: table }) => (
-                  <Table
-                    key={`table-${slugify(table.name)}`}
-                    id={`table-${slugify(table.name)}`}
-                    table={table}
-                    price={priceType}
-                  />
-                ))}
-              </Container>
-            </SectionContainer>
-          </BackgroundContainer>
-        </div>
-      )}
-    />
+      }
+    }
+  `);
+
+  return (
+    <div id="tables">
+      <BackgroundContainer bg="secondaryHighlight" color="primary">
+        <SectionContainer>
+          <h3>Sponsorships</h3>
+          <Container>
+            {data.allTablesYaml.edges.map(({ node: table }) => (
+              <Table
+                key={`table-${slugify(table.name)}`}
+                id={`table-${slugify(table.name)}`}
+                table={table}
+                price={priceType}
+              />
+            ))}
+          </Container>
+        </SectionContainer>
+      </BackgroundContainer>
+    </div>
   );
 };
 
