@@ -38,6 +38,7 @@ const Sponsorships = () => {
             earlyPrice
             regularPrice
             latePrice
+            bg
             color
             benefits
           }

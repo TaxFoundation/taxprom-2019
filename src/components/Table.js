@@ -9,24 +9,28 @@ const TableBox = styled(SponsorLevel)`
   background-color: ${props => props.theme[props.bg]};
   color: ${props => props.theme[props.color]};
 
+  .sponsorship__title {
+    color: ${props => props.theme[props.color]};
+  }
+
   .sponsorship__price {
     border-bottom: 1px solid ${props => props.theme[props.color]};
   }
 
   .sponsorship__pledge {
     background-color: ${props => props.theme[props.color]};
-    color: ${props => props.theme[props.color]};
+    color: ${props => props.theme[props.bg]};
 
     &:active,
     &:focus,
     &:visited {
-      color: ${props => props.theme[props.color]};
+      color: ${props => props.theme[props.bg]};
     }
   }
 `;
 
 const Table = ({ table, id, price }) => (
-  <TableBox bg={table.color}>
+  <TableBox bg={table.bg} color={table.color}>
     <h4 className="sponsorship__title">{table.name}</h4>
     <p className="sponsorship__price">{dollars(table[price])}</p>
     <ul className="sponsorship__benefits">

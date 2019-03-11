@@ -34,8 +34,8 @@ const SponsorLevel = styled.div`
 
   .sponsorship__pledge {
     align-self: end;
-    background-color: ${props => props.theme.white};
-    color: ${props => props.theme.primary};
+    background-color: ${props => props.theme[props.color]};
+    color: ${props => props.theme[props.bg]};
     cursor: pointer;
     display: block;
     font-size: 1rem;
@@ -47,7 +47,7 @@ const SponsorLevel = styled.div`
     &:active,
     &:focus,
     &:visited {
-      color: ${props => props.theme.primary};
+      color: ${props => props.theme[props.bg]};
       text-decoration: none;
     }
   }

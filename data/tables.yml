@@ -2,7 +2,8 @@
   earlyPrice: 25000
   regularPrice: 30000
   latePrice: 35000
-  color: yellow
+  bg: yellow
+  color: blueDark
   benefits:
     - "One large table (10 tickets) with preferred seating"
     - "Namebadge ribbon recognizing sponsorship level"
@@ -19,7 +20,8 @@
   earlyPrice: 15000
   regularPrice: 20000
   latePrice: 22000
-  color: blueLight
+  bg: blueLight
+  color: blueDark
   benefits:
     - "One large table (10 tickets) with preferred seating"
     - "Namebadge ribbon recognizing sponsorship level"
@@ -35,7 +37,8 @@
   earlyPrice: 12000
   regularPrice: 15000
   latePrice: 18000
-  color: blue
+  bg: blue
+  color: white
   benefits:
     - "One table (8 tickets)"
     - "Namebadge ribbon recognizing sponsorship level"
@@ -49,7 +52,8 @@
   earlyPrice: 8000
   regularPrice: 10000
   latePrice: 10000
-  color: blueDark
+  bg: blueDark
+  color: white
   benefits:
     - "Half-Table (4 tickets)"
     - "Namebadge ribbon recognizing sponsorship level"
