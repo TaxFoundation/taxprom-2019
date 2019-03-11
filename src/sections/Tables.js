@@ -15,7 +15,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   padding-bottom: 1rem;
 
-  @media (min-width: 600px) {
+  @media (min-width: 860px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;

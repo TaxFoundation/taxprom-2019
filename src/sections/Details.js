@@ -34,7 +34,7 @@ const StatisticsList = styled.ul`
   grid-template-columns: 1fr;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 
-  @media (min-width: 700px) {
+  @media (min-width: 860px) {
     grid-template-columns: repeat(${props => props.statsNumber}, 1fr);
   }
 `;
