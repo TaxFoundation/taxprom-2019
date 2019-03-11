@@ -24,17 +24,19 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     text-align: center;
-    text-transform: uppercase;
   }
   
   h1 {
+    color: ${props => props.theme.yellow};
     font-family: ${props => props.theme.fontFamilies.lato};
     font-size: calc(3 * ${props => props.theme.fontSize});
     line-height: 1.2;
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
   
   h2 {
+    color: ${props => props.theme.blueLight};
     font-family: ${props => props.theme.fontFamilies.baskerville};
     font-size: calc(2.6 * ${props => props.theme.fontSize});
     line-height: 1.4;
@@ -42,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   h3 {
+    color: ${props => props.theme.blueLight};
     font-family: ${props => props.theme.fontFamilies.baskerville};
     font-size: calc(2 * ${props => props.theme.fontSize});
     line-height: 1.6;
@@ -49,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   h4 {
+    color: ${props => props.theme.blueLight};
     font-family: ${props => props.theme.fontFamilies.baskerville};
     font-size: calc(1.4 * ${props => props.theme.fontSize});
     line-height: 1.6;

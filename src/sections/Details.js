@@ -102,7 +102,7 @@ const Details = ({ details, id }) => (
               <li key={`detail-${i}`}>{d}</li>
             ))}
           </DetailsList>
-          <h4>In 2017 Tax Prom was Joined By</h4>
+          <h4>In 2018 Tax Prom was Joined By</h4>
           <StatisticsList statsNumber={details.detailsStatistics.length}>
             {details.detailsStatistics.map((d, i) => (
               <StatisticItem key={`stat-${i}`} color={d.color}>

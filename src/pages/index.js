@@ -9,7 +9,11 @@ import Details from '../sections/Details';
 const IndexPage = () => (
   <Layout>
     <SEO title="Join us!" keywords={[`gatsby`, `application`, `react`]} />
-    <Splash />
+    <Splash
+      date={taxprom.date}
+      venueName={taxprom.venueName}
+      showVideo={taxprom.video.showVideo}
+    />
     <Details details={taxprom.details} id="details" />
   </Layout>
 );

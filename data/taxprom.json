@@ -10,7 +10,7 @@
   "showAwardWinnerSection": true,
   "showHostCommittee": false,
   "video": {
-    "showVideo": true,
+    "showVideo": false,
     "youtubeURL": "https://www.youtube.com/embed/AmFST3bnUMQ"
   },
   "details": {
@@ -23,22 +23,22 @@
       "Promote your brand to the D.C. tax and policy community."
     ],
     "detailsStatistics": [{
-        "number": 268,
+        "number": 187,
         "text": "Congressional Staffers",
         "color": "blueDark"
       },
       {
-        "number": 482,
+        "number": 456,
         "text": "Tax and Policy Professionals from the private sector",
         "color": "blue"
       },
       {
-        "number": 750,
+        "number": 650,
         "text": "Total Policy Professionals in attendance",
         "color": "blueLight"
       },
       {
-        "number": 61,
+        "number": 59,
         "text": "Corporate Sponsors",
         "color": "yellow"
       }

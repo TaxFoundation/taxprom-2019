@@ -28,7 +28,7 @@ const TaxPromContainer = styled.div`
 `;
 
 const InfoText = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   margin: 0;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
@@ -65,10 +65,10 @@ const Splash = ({ date, venueName, showVideo }) => (
     <TaxPromContainer>
       <TaxProm />
     </TaxPromContainer>
-    {/* <InfoText>{fullDate(new Date(date))}</InfoText> */}
-    {/* <InfoText>{venueName}</InfoText> */}
+    <InfoText>{fullDate(new Date(date))}</InfoText>
+    <InfoText>{venueName}</InfoText>
     {showVideo ? (
-      <SectionLink href="#video">Watch 2017 Recap</SectionLink>
+      <SectionLink href="#video">Watch 2018 Recap</SectionLink>
     ) : null}
   </SplashContainer>
 );
