@@ -54,7 +54,6 @@ const Tickets = () => {
                 key={`ticket-${slugify(ticket.name)}`}
                 id={`ticket-${slugify(ticket.name)}`}
                 ticket={ticket}
-                price={priceType}
               />
             ))}
           </Container>

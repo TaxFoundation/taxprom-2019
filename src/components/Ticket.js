@@ -17,7 +17,7 @@ const TicketBox = styled(SponsorLevel)`
 const Ticket = ({ ticket, id, price }) => (
   <TicketBox>
     <h4 className="sponsorship__title">{ticket.name}</h4>
-    <p className="sponsorship__price">{dollars(price)}</p>
+    <p className="sponsorship__price">{dollars(ticket.price)}</p>
     <ul className="sponsorship__benefits">
       {ticket.benefits.map((b, i) => (
         <li key={`${id}-${i}`}>{b}</li>
