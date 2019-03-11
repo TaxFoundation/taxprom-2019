@@ -75,13 +75,13 @@ const Photo = styled.div`
 
 const Details = ({ details, id }) => (
   <Fragment>
-    <BackgroundColorContainer bg="primary" color="white">
+    <BackgroundColorContainer bg="black" color="white">
       <TaglineContainer>
         <h2>{details.detailsTitle}</h2>
         <p>{details.detailsDescription}</p>
       </TaglineContainer>
     </BackgroundColorContainer>
-    <BackgroundColorContainer bg="primary" color="white">
+    <BackgroundColorContainer bg="black" color="white">
       <PhotoGrid>
         <Photo src={PhotoA} />
         <Photo src={PhotoB} />
@@ -93,7 +93,7 @@ const Details = ({ details, id }) => (
         <Photo src={PhotoH} />
       </PhotoGrid>
     </BackgroundColorContainer>
-    <BackgroundColorContainer bg="secondary" color="white">
+    <BackgroundColorContainer bg="black" color="white">
       <div id={id}>
         <SectionContainer>
           <h3>Why You Can't Miss Tax Prom</h3>

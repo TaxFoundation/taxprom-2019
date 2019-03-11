@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   align-content: space-between;
   align-items: end;
   background-color: ${props =>
-    props.backgroundColor ? props.theme.headerBG : 'transparent'};
+    props.backgroundColor ? props.theme.blueDark : 'transparent'};
   display: grid;
   grid-template: auto / auto 1fr auto;
   left: 0;
@@ -48,7 +48,7 @@ const CloseLink = styled.div`
 
 const Menu = styled.div`
   align-content: start;
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.blueDark};
   bottom: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -70,15 +70,15 @@ const Menu = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.blueLight};
   padding: 2rem;
   text-decoration: none;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: ${props => props.theme.primaryHighlight};
-    color: ${props => props.theme.white};
+    background-color: ${props => props.theme.yellow};
+    color: ${props => props.theme.blueLight};
   }
 `;
 

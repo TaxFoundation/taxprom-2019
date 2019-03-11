@@ -25,22 +25,22 @@
     "detailsStatistics": [{
         "number": 268,
         "text": "Congressional Staffers",
-        "color": "primary"
+        "color": "blueDark"
       },
       {
         "number": 482,
         "text": "Tax and Policy Professionals from the private sector",
-        "color": "primaryHighlight"
+        "color": "blue"
       },
       {
         "number": 750,
         "text": "Total Policy Professionals in attendance",
-        "color": "secondaryHighlight"
+        "color": "blueLight"
       },
       {
         "number": 61,
         "text": "Corporate Sponsors",
-        "color": "tertiary"
+        "color": "yellow"
       }
     ]
   }

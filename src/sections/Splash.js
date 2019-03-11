@@ -8,7 +8,7 @@ import splash from '../images/splash.jpg';
 const SplashContainer = styled.section`
   align-content: center;
   align-items: center;
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.black};
   background-image: url(${splash});
   background-position: 50% 50%;
   background-size: cover;
@@ -35,7 +35,7 @@ const InfoText = styled.p`
 `;
 
 const SectionLink = styled.a`
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.blue};
   border-radius: 4px;
   color: #fff;
   font-size: 1.4rem;

@@ -37,6 +37,17 @@ module.exports = {
         path: `${__dirname}/data/`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Libre Baskerville:400,400i,700'],
+        },
+        typekit: {
+          id: ' obh3hwp',
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
