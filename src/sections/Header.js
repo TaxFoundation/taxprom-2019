@@ -87,11 +87,16 @@ const Header = () => {
   const [color, setColor] = useState(false);
 
   useEffect(() => {
-    if (window.scrollY > 30) {
-      setColor(true);
-    } else if (color && window.scrollY <= 30) {
-      setColor(false);
+    function handleHeaderBG(e) {
+      if (window.scrollY > 30) {
+        setColor(true);
+      } else if (color && window.scrollY <= 30) {
+        setColor(false);
+      }
     }
+    window.addEventListener('scroll', handleHeaderBG);
+
+    return () => window.removeEventListener('scroll', handleHeaderBG);
   }, [window.scrollY]);
 
   const goToSection = id => {
