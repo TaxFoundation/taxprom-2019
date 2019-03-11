@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import SponsorLevel from './SponsorLevel';
 import { dollars, slugify } from '../utilities/formatters';
@@ -8,22 +9,26 @@ const PackageBox = SponsorLevel.extend`
   color: #fff;
 `;
 
-const Package = props => (
+const Package = ({ reception }) => (
   <PackageBox>
-    <h4 className="sponsorship__title">{props.package.name}</h4>
-    <p className="sponsorship__price">{dollars(props.package.price)}</p>
+    <h4 className="sponsorship__title">{reception.name}</h4>
+    <p className="sponsorship__price">{dollars(reception.price)}</p>
     <ul className="sponsorship__benefits">
-      {props.package.benefits.map((b, i) => (
-        <li key={`${props.id}-${i}`}>{b}</li>
+      {reception.benefits.map((b, i) => (
+        <li key={`${slugify(reception.name)}-${i}`}>{b}</li>
       ))}
     </ul>
     <Link
       className="sponsorship__pledge"
-      to={`/join-tax-prom/${slugify(props.package.name)}`}
+      to={`/join-tax-prom/${slugify(reception.name)}`}
     >
-      {`Sponsor the ${props.package.name}`}
+      {`Sponsor the ${reception.name}`}
     </Link>
   </PackageBox>
 );
+
+Package.propTypes = {
+  reception: PropTypes.object,
+};
 
 export default Package;
