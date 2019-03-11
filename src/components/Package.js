@@ -13,9 +13,14 @@ const Package = props => (
     <h4 className="sponsorship__title">{props.package.name}</h4>
     <p className="sponsorship__price">{dollars(props.package.price)}</p>
     <ul className="sponsorship__benefits">
-      {props.package.benefits.map((b, i) => <li key={`${props.id}-${i}`}>{b}</li>)}
+      {props.package.benefits.map((b, i) => (
+        <li key={`${props.id}-${i}`}>{b}</li>
+      ))}
     </ul>
-    <Link className="sponsorship__pledge" to={`/join-tax-prom/${slugify(props.package.name)}`}>
+    <Link
+      className="sponsorship__pledge"
+      to={`/join-tax-prom/${slugify(props.package.name)}`}
+    >
       {`Sponsor the ${props.package.name}`}
     </Link>
   </PackageBox>

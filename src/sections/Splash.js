@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { fullDate } from '../utilities/formatters';
 import { TaxProm } from '../components/Icons';
@@ -57,21 +58,25 @@ const SectionLink = styled.a`
   }
 `;
 
-class Splash extends Component {
-  render() {
-    // let date = new Date(this.props.date);
+const Splash = ({ date, venueName, showVideo }) => (
+  // let date = n;
 
-    return (
-      <SplashContainer>
-        <TaxPromContainer>
-          <TaxProm />
-        </TaxPromContainer>
-        {/* <InfoText>{fullDate(date)}</InfoText> */}
-        {/* <InfoText>{this.props.venueName}</InfoText> */}
-        {this.props.showVideo ? <SectionLink href="#video">Watch 2017 Recap</SectionLink> : null}
-      </SplashContainer>
-    );
-  }
-}
+  <SplashContainer>
+    <TaxPromContainer>
+      <TaxProm />
+    </TaxPromContainer>
+    {/* <InfoText>{fullDate(new Date(date))}</InfoText> */}
+    {/* <InfoText>{venueName}</InfoText> */}
+    {showVideo ? (
+      <SectionLink href="#video">Watch 2017 Recap</SectionLink>
+    ) : null}
+  </SplashContainer>
+);
+
+Splash.propTypes = {
+  date: PropTypes.string,
+  venueName: PropTypes.string,
+  showVideo: PropTypes.bool,
+};
 
 export default Splash;

@@ -7,7 +7,8 @@ import { Logo, MenuIcon, CloseIcon } from '../components/Icons';
 const StyledHeader = styled.header`
   align-content: space-between;
   align-items: end;
-  background-color: ${props => (props.backgroundColor ? props.theme.headerBG : 'transparent')};
+  background-color: ${props =>
+    props.backgroundColor ? props.theme.headerBG : 'transparent'};
   display: grid;
   grid-template: auto / auto 1fr auto;
   left: 0;
@@ -62,7 +63,8 @@ const Menu = styled.div`
   z-index: 100;
 
   @media (min-width: 500px) {
-    box-shadow: ${props => (props.show ? '-3px 0 5px' : '3px 0 0')} rgba(0, 0, 0, 0.3);
+    box-shadow: ${props => (props.show ? '-3px 0 5px' : '3px 0 0')}
+      rgba(0, 0, 0, 0.3);
     width: 300px;
   }
 `;
@@ -92,7 +94,7 @@ class Header extends Component {
   }
 
   toggleMenu() {
-    let menu = !this.state.showMenu;
+    const menu = !this.state.showMenu;
     this.setState({ showMenu: menu });
   }
 
@@ -103,7 +105,7 @@ class Header extends Component {
 
   render() {
     return (
-      <StyledHeader backgroundColor={this.props.transparent ? false : true}>
+      <StyledHeader backgroundColor={!this.props.transparent}>
         <LogoLink href="https://taxfoundation.org">
           <Logo fill="#fff" />
         </LogoLink>

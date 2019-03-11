@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
 
@@ -27,22 +27,21 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={Theme}>
-      <>
-        <Reset />
-        <Header></Header>
-        <div>
-          <main>{children}</main>
-          <footer>
-          </footer>
-        </div>
-      </>
+        <>
+          <Reset />
+          <Header />
+          <div>
+            <main>{children}</main>
+            <footer />
+          </div>
+        </>
       </ThemeProvider>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
