@@ -1,0 +1,57 @@
+- name: Platinum
+  earlyPrice: 25000
+  regularPrice: 30000
+  latePrice: 35000
+  color: primary
+  benefits:
+    - "One large table (10 tickets) with preferred seating"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as a Platinum Sponsor in the event program provided to all guests"
+    - "10 tickets to the VIP Reception"
+    - "Half-page customized message to tax community in the event program provided to all guests"
+    - "Event website recognition linked to your website"
+    - "Listing or logo recognition on posters at VIP, general, and dessert receptions"
+    - "Opportunity to seat preferred key guests at your table "
+    - "Listing or logo in repeating slideshow during event"
+    - "Opportunity to nominate Tax Prom King & Queen candidates"
+    - "Recognition by name from the podium during dinner"
+- name: Gold
+  earlyPrice: 15000
+  regularPrice: 20000
+  latePrice: 22000
+  color: primaryHighlight
+  benefits:
+    - "One large table (10 tickets) with preferred seating"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as a Gold Sponsor in the event program provided to all guests"
+    - "4 tickets to the VIP Reception"
+    - "Quarter-page customized message to tax community in the event program provided to all guests"
+    - "Event website recognition linked to your website"
+    - "Listing or logo recognition on posters at VIP, general, and dessert receptions"
+    - "Opportunity to seat preferred key guests at your table "
+    - "Listing or logo in repeating slideshow during event"
+    - "Opportunity to nominate Tax Prom King & Queen candidates"
+- name: Silver
+  earlyPrice: 12000
+  regularPrice: 15000
+  latePrice: 18000
+  color: white
+  benefits:
+    - "One table (8 tickets)"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as a Silver Sponsor in the event program provided to all guests"
+    - "2 tickets to the VIP Reception"
+    - "50% off prices for a customized message to tax community in the event program provided to all guests"
+    - "Event website recognition linked to your website"
+    - "Listing on posters at general and dessert receptions"
+    - "Opportunity to seat key guests at your table"
+- name: Bronze
+  earlyPrice: 8000
+  regularPrice: 10000
+  latePrice: 10000
+  color: white
+  benefits:
+    - "Half-Table (4 tickets)"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Listing as Bronze Sponsor in the event programs provided to all guests"
+    - "Event website recognition"
