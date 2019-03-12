@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
-import { worker } from 'cluster';
 import Layout from './layout';
 import { dollars } from '../utilities/formatters';
 
@@ -59,11 +58,19 @@ const StyledForm = styled.div`
   input,
   select,
   textarea {
+    background-color: ${props => props.theme.blue};
     border: 0;
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.white};
     font-size: 1rem;
     padding: 0.5rem;
+    transition: background-color 0.1s ease-in-out;
     width: 100%;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: ${props => props.theme.blueLight};
+    }
   }
 
   button {
@@ -78,20 +85,31 @@ const StyledForm = styled.div`
     text-align: center;
     width: 100%;
 
+    &:active,
+    &:focus,
     &:hover {
       background-color: ${props => props.theme.blueLight};
     }
   }
 `;
 
+const Heading = styled.h1`
+  border-bottom: 1px solid ${props => props.theme.blue};
+  color: ${props => props.theme.blue};
+  font-family: ${props => props.theme.fontFamilies.baskerville};
+  font-size: 3rem;
+  font-style: italic;
+  padding-bottom: 1rem;
+  text-transform: none;
+`;
+
 const StyledLink = styled(Link)`
-  border-bottom: 1px solid ${props => props.theme.blueLight};
   color: ${props => props.theme.white};
   display: block;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.1s ease-in-out;
   text-align: center;
   text-decoration: none;
 
@@ -183,10 +201,7 @@ const ReceptionPledge = ({ data }) => {
     <Layout>
       <StyledForm success={success}>
         <form onSubmit={e => setSubmit(true)} required>
-          <StyledLink to="/">← Back to Main Page</StyledLink>
-          <p
-            style={{ textAlign: 'center' }}
-          >{`I want to sponsor the ${name} for ${dollars(price)}.`}</p>
+          <Heading>{`I want to sponsor the ${name}.`}</Heading>
           <div className="tp-name">
             <TextInput
               item="fName"
@@ -226,6 +241,7 @@ const ReceptionPledge = ({ data }) => {
             <textarea name="comments" id="comments" onChange={updateData} />
           </div>
           <button type="submit">{buttonText}</button>
+          <StyledLink to="/">← Back to Main Page</StyledLink>
         </form>
       </StyledForm>
     </Layout>
