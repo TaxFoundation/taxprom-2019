@@ -115,7 +115,7 @@ const Header = () => {
       </MenuLink>
       <Menu show={menu}>
         <CloseLink onClick={() => setMenu(!menu)}>
-          <CloseIcon />
+          <CloseIcon fill="#fff" />
         </CloseLink>
         {/* {this.props.routes.map(r => {
           return r.show ? (

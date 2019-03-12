@@ -88,8 +88,8 @@ MenuIcon.propTypes = { fill: PropTypes.string };
 
 const CloseIcon = ({ fill }) => (
   <svg viewBox="0 0 12 12" height="100%">
-    <line x1="1" y1="11" x2="11" y2="1" stroke="white" strokeWidth="2" />
-    <line x1="1" y1="1" x2="11" y2="11" stroke="white" strokeWidth="2" />
+    <line x1="1" y1="11" x2="11" y2="1" stroke={fill} strokeWidth="2" />
+    <line x1="1" y1="1" x2="11" y2="11" stroke={fill} strokeWidth="2" />
   </svg>
 );
 
