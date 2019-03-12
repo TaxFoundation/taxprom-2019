@@ -42,7 +42,7 @@ const ReceptionBox = styled(SponsorLevel)`
 `;
 
 const Reception = ({ reception, id }) => (
-  <ReceptionBox bg={reception.bg} color={reception.color}>
+  <ReceptionBox bg={reception.bg} color={reception.color} id={id}>
     <h4 className="sponsorship__title">{reception.name}</h4>
     <p className="sponsorship__price">{dollars(reception.price)}</p>
     <ul className="sponsorship__benefits">
