@@ -20,6 +20,15 @@ const Container = styled.div`
   }
 `;
 
+const Heading = styled.div`
+  color: ${props => props.theme.yellow};
+  font-family: ${props => props.theme.fontFamilies.lato};
+  font-size: calc(2rem + 5vw);
+  font-style: normal;
+  padding-bottom: 2rem;
+  text-align: center;
+`;
+
 const Sponsorships = () => {
   let priceType = 'earlyPrice';
   const now = Date.now();
@@ -51,7 +60,7 @@ const Sponsorships = () => {
     <div id="tables">
       <BackgroundContainer bg="black" color="white">
         <SectionContainer>
-          <h3>Sponsorships</h3>
+          <Heading>Table Sponsorships</Heading>
           <Container>
             {data.allTablesYaml.edges.map(({ node: table }) => (
               <Table

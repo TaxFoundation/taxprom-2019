@@ -39,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.blueLight};
     font-family: ${props => props.theme.fontFamilies.baskerville};
     font-size: calc(2.6 * ${props => props.theme.fontSize});
+    font-style: italic;
     line-height: 1.4;
     margin-bottom: 1rem;
   }
@@ -47,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.blueLight};
     font-family: ${props => props.theme.fontFamilies.baskerville};
     font-size: calc(2 * ${props => props.theme.fontSize});
+    font-style: italic;
     line-height: 1.6;
     margin-bottom: 1rem;
   }
@@ -55,6 +57,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.blueLight};
     font-family: ${props => props.theme.fontFamilies.baskerville};
     font-size: calc(1.4 * ${props => props.theme.fontSize});
+    font-style: italic;
     line-height: 1.6;
     margin-bottom: 1rem;
   }

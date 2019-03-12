@@ -14,7 +14,7 @@ const TableBox = styled(SponsorLevel)`
   .sponsorship__title {
     color: ${props => props.theme[props.color]};
     font-family: ${props => props.theme.fontFamilies.lato};
-    font-size: 4rem;
+    font-size: calc(2rem + 2vw);
   }
 
   .sponsorship__price {
