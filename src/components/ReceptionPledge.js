@@ -24,7 +24,7 @@ const StyledForm = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  transition: background-color 0.7s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 
   @media (min-width: 500px) {
     padding: 70px 3rem 3rem 3rem;
@@ -146,6 +146,15 @@ TextInput.propTypes = {
   update: PropTypes.func,
 };
 
+const Result = styled.div`
+  color: ${props => props.theme.white};
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  transform: scaleY(${props => (props.success ? '1' : '0')});
+  transition: transform 0.1s ease-in-out;
+`;
+
 const ReceptionPledge = ({ data }) => {
   const { name, price } = data.receptionsYaml;
   const [form, setForm] = useState({
@@ -162,6 +171,7 @@ const ReceptionPledge = ({ data }) => {
   const [buttonText, setButtonText] = useState('Submit');
   const [submit, setSubmit] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (submit) {
@@ -180,6 +190,7 @@ const ReceptionPledge = ({ data }) => {
             setSuccess(true);
             setButtonText('Success!');
           } else {
+            setError(true);
             setButtonText(`Sorry, something didn't work.`);
             throw new Error('Form submission did not work');
           }
@@ -249,6 +260,24 @@ const ReceptionPledge = ({ data }) => {
           <StyledLink to="/">← Back to Main Page</StyledLink>
         </form>
       </StyledForm>
+      <Result success={success} error={error}>
+        {success ? (
+          <div>
+            <h1>Thank You!</h1>
+            <p>Your pledge has been received. You will hear from us shortly!</p>
+          </div>
+        ) : null}
+        {error ? (
+          <div>
+            <h1>Uh Oh</h1>
+            <p>
+              Sorry, but something has gone wrong. Please contact Josh Jaye at{' '}
+              <a href="mailto:jjj@taxfoundation.org">jjj@taxfoundation.org</a>{' '}
+              to make your pledge.
+            </p>
+          </div>
+        ) : null}
+      </Result>
     </Layout>
   );
 };
