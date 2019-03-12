@@ -190,6 +190,11 @@ const ReceptionPledge = ({ data }) => {
     }
   }, [submit]);
 
+  const submitForm = e => {
+    e.preventDefault();
+    setSubmit(true);
+  };
+
   const updateData = e => {
     setForm({
       ...form,
@@ -200,7 +205,7 @@ const ReceptionPledge = ({ data }) => {
   return (
     <Layout>
       <StyledForm success={success}>
-        <form onSubmit={e => setSubmit(true)} required>
+        <form onSubmit={e => submitForm(e)} required>
           <Heading>{`I want to sponsor the ${name}.`}</Heading>
           <div className="tp-name">
             <TextInput
