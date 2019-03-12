@@ -8,6 +8,10 @@ import Theme from '../Theme';
 import Header from '../sections/Header';
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+  
   html,
   body {
     font-family: ${props => props.theme.fontFamilies.proxima};

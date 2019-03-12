@@ -81,19 +81,6 @@ const StyledForm = styled.div`
   }
 `;
 
-const TextInput = ({ item, label, type, required, update }) => (
-  <div className={`tp-${item}`}>
-    <label htmlFor={item}>{label}</label>
-    <input
-      name={item}
-      id={item}
-      onChange={e => update(item, e.target.value)}
-      type={type || 'text'}
-      required={required || false}
-    />
-  </div>
-);
-
 const StyledLink = styled(Link)`
   border-bottom: 1px solid ${props => props.theme.blueLight};
   color: ${props => props.theme.white};
@@ -116,6 +103,19 @@ const StyledLink = styled(Link)`
     color: ${props => props.theme.blueLight};
   }
 `;
+
+const TextInput = ({ item, label, type, required, update }) => (
+  <div className={`tp-${item}`}>
+    <label htmlFor={item}>{label}</label>
+    <input
+      name={item}
+      id={item}
+      onChange={e => update(item, e.target.value)}
+      type={type || 'text'}
+      required={required || false}
+    />
+  </div>
+);
 
 class SponsorshipForm extends Component {
   constructor(props) {
@@ -160,41 +160,34 @@ class SponsorshipForm extends Component {
 
     this.updateRequest = this.updateRequest.bind(this);
     this.submitForm = this.submitForm.bind(this);
-    this.validateData = this.validateData.bind(this);
-  }
-
-  validateData() {
-    return true;
   }
 
   submitForm(e) {
     e.preventDefault();
 
-    if (this.validateData()) {
-      const headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      const request = new Request(API, {
-        headers,
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(this.state.data),
-      });
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    const request = new Request(API, {
+      headers,
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify(this.state.data),
+    });
 
-      fetch(request)
-        .then(response => {
-          if (response.status === 200) {
-            this.setState({ success: true });
-            setTimeout(() => {
-              this.props.history.push('/success');
-            }, 700);
-          } else {
-            throw new Error('Form submission did not work');
-          }
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
+    fetch(request)
+      .then(response => {
+        if (response.status === 200) {
+          this.setState({ success: true });
+          setTimeout(() => {
+            this.props.history.push('/success');
+          }, 700);
+        } else {
+          throw new Error('Form submission did not work');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 
   updateRequest(item, content) {

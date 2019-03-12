@@ -43,10 +43,19 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const sponsorships = [].concat(
-        ...result.data.allReceptionsYaml.edges,
         ...result.data.allTablesYaml.edges,
         ...result.data.allTicketsYaml.edges
       );
+
+      result.data.allReceptionsYaml.edges.forEach(({ node }) => {
+        createPage({
+          path: `/join-tax-prom/${slugify(node.name)}`,
+          component: path.resolve(`./src/components/ReceptionPledge.js`),
+          context: {
+            name: node.name,
+          },
+        });
+      });
 
       sponsorships.forEach(({ node }) => {
         createPage({
