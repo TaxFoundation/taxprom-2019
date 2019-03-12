@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { fullDate } from '../utilities/formatters';
 import { TaxProm } from '../components/Icons';
-import splash from '../images/splash.jpg';
+// import splash from '../images/splash.jpg';
 
 const SplashContainer = styled.section`
   align-content: center;
   align-items: center;
   background-color: ${props => props.theme.black};
-  background-image: url(${splash});
+  /* background-image: url(${splash}); */
   background-position: 50% 50%;
   background-size: cover;
   color: #fff;

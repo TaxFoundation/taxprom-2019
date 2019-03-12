@@ -59,10 +59,10 @@ const StatisticsText = styled.p`
 const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 25vh);
+  grid-template-rows: repeat(2, 25vh);
 
   @media (min-width: 1000px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 25vh);
   }
 `;
@@ -87,10 +87,6 @@ const Details = ({ details, id }) => (
         <Photo src={PhotoB} />
         <Photo src={PhotoC} />
         <Photo src={PhotoD} />
-        <Photo src={PhotoE} />
-        <Photo src={PhotoF} />
-        <Photo src={PhotoG} />
-        <Photo src={PhotoH} />
       </PhotoGrid>
     </BackgroundColorContainer>
     <BackgroundColorContainer bg="black" color="white">
