@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
 
 import Layout from './layout';
-import { dollars } from '../utilities/formatters';
 
 const API =
   'https://x94h0tg3id.execute-api.us-east-1.amazonaws.com/production/taxprom';
