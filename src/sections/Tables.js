@@ -23,10 +23,11 @@ const Container = styled.div`
 const Heading = styled.div`
   color: ${props => props.theme.yellow};
   font-family: ${props => props.theme.fontFamilies.lato};
-  font-size: calc(2rem + 5vw);
+  font-size: calc(2rem + 3vw);
   font-style: normal;
   padding-bottom: 2rem;
   text-align: center;
+  text-transform: uppercase;
 `;
 
 const Sponsorships = () => {
