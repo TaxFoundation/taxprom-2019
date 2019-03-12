@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Splash from '../sections/Splash';
 import Details from '../sections/Details';
+import Receptions from '../sections/Receptions';
 import Tables from '../sections/Tables';
 import Tickets from '../sections/Tickets';
 
@@ -18,6 +19,7 @@ const IndexPage = () => (
     />
     <Details details={taxprom.details} id="details" />
     {/* Awardees */}
+    <Receptions />
     <Tables />
     <Tickets />
   </Layout>

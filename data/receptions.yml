@@ -1,5 +1,7 @@
 - name: VIP Reception
   price: 50000
+  bg: black
+  color: yellow
   benefits:
     - "Two Platinum large tables (20 people)"
     - "20 tickets to the VIP Reception"
@@ -11,6 +13,8 @@
     - "Opportunity to nominate Tax Prom King & Queen candidates"
 - name: General Reception
   price: 40000
+  bg: black
+  color: yellow
   benefits:
     - "One Platinum large table (10 people)"
     - "General Reception Branding"
@@ -20,6 +24,8 @@
     - "Opportunity to nominate Tax Prom King & Queen candidates"
 - name: Dessert Reception
   price: 35000
+  bg: black
+  color: yellow
   benefits:
     - "One Platinum large table (10 people)"
     - "Dessert Reception Branding"
