@@ -8,6 +8,7 @@ import Details from '../sections/Details';
 import Receptions from '../sections/Receptions';
 import Tables from '../sections/Tables';
 import Tickets from '../sections/Tickets';
+import PreviousSponsors from '../sections/PreviousSponsors';
 
 const IndexPage = () => (
   <Layout>
@@ -22,6 +23,7 @@ const IndexPage = () => (
     <Receptions />
     <Tables />
     <Tickets />
+    <PreviousSponsors />
   </Layout>
 );
 
