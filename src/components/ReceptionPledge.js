@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import { worker } from 'cluster';
 import Layout from './layout';
 import { dollars } from '../utilities/formatters';
 
 const API =
-  'https://qzdppwz79c.execute-api.us-east-1.amazonaws.com/prod/taxprom';
+  'https://x94h0tg3id.execute-api.us-east-1.amazonaws.com/production/taxprom';
 
 const StyledForm = styled.div`
   align-content: stretch;
@@ -111,12 +113,20 @@ const TextInput = ({ item, label, type, required, update }) => (
     <input
       name={item}
       id={item}
-      onChange={e => update}
+      onChange={e => update(e)}
       type={type || 'text'}
       required={required || false}
     />
   </div>
 );
+
+TextInput.propTypes = {
+  item: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.string,
+  required: PropTypes.bool,
+  update: PropTypes.func,
+};
 
 const ReceptionPledge = ({ data }) => {
   const { name, price } = data.receptionsYaml;
@@ -131,6 +141,7 @@ const ReceptionPledge = ({ data }) => {
     phone: '',
     comments: '',
   });
+  const [buttonText, setButtonText] = useState('Submit');
   const [submit, setSubmit] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -142,14 +153,16 @@ const ReceptionPledge = ({ data }) => {
         headers,
         method: 'POST',
         mode: 'cors',
-        body: JSON.stringify(data),
+        body: JSON.stringify(form),
       });
 
       fetch(request)
         .then(response => {
           if (response.status === 200) {
             setSuccess(true);
+            setButtonText('Success!');
           } else {
+            setButtonText(`Sorry, something didn't work.`);
             throw new Error('Form submission did not work');
           }
         })
@@ -212,11 +225,15 @@ const ReceptionPledge = ({ data }) => {
             <label htmlFor="comments">Questions or Comments</label>
             <textarea name="comments" id="comments" onChange={updateData} />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit">{buttonText}</button>
         </form>
       </StyledForm>
     </Layout>
   );
+};
+
+ReceptionPledge.propTypes = {
+  data: PropTypes.object,
 };
 
 export default ReceptionPledge;
