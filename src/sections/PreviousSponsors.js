@@ -8,17 +8,16 @@ import { slugify } from '../utilities/formatters';
 
 const PreviousSponsorsContainer = styled(SectionContainer)`
   color: #fff;
-  grid-gap: 1rem;
-  grid-template: repeat(2, auto) / repeat(12, 1fr);
+  grid-gap: 3rem;
+  grid-template: repeat(3, auto) / repeat(12, 1fr);
+  text-align: center;
 
   & div:nth-child(-n + 3) {
     grid-column: span 4;
-    grid-row: 1 / 2;
   }
 
   & div:nth-child(n + 4):nth-child(-n + 7) {
-    grid-column: span 3;
-    grid-row: 2 / 3;
+    grid-column: span 6;
   }
 `;
 
