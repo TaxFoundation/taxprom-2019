@@ -14,11 +14,36 @@ const PreviousSponsorsContainer = styled(SectionContainer)`
 
   & div:nth-child(-n + 3) {
     grid-column: span 4;
+
+    h4 {
+      font-size: 1.6rem;
+    }
+
+    li {
+      font-size: 1.2rem;
+    }
   }
 
   & div:nth-child(n + 4):nth-child(-n + 7) {
     grid-column: span 6;
   }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:visited {
+      color: #fff;
+    }
+  }
+`;
+
+const Heading = styled.h3`
+  color: ${props => props.theme.yellow};
+  font-family: ${props => props.theme.fontFamilies.lato};
+  font-size: 3rem;
+  font-style: normal;
+  text-transform: uppercase;
 `;
 
 const PreviousSponsors = () => {
@@ -40,6 +65,7 @@ const PreviousSponsors = () => {
 
   return (
     <BackgroundContainer bg="black" id="previous">
+      <Heading>Previous Sponsors</Heading>
       <PreviousSponsorsContainer>
         {data.allPreviousSponsorsYaml.edges.map(({ node }) => (
           <div>
