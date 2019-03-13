@@ -61,7 +61,7 @@ const SectionLink = styled.a`
 const Splash = ({ date, venueName, showVideo }) => (
   // let date = n;
 
-  <SplashContainer>
+  <SplashContainer id="home">
     <TaxPromContainer>
       <TaxProm />
     </TaxPromContainer>

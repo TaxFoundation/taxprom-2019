@@ -83,6 +83,44 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const ListOfSections = [
+  {
+    name: 'Home',
+    link: 'home',
+    show: true,
+  },
+  {
+    name: 'Details',
+    link: 'details',
+    show: true,
+  },
+  {
+    name: 'Receptions',
+    link: 'receptions',
+    show: true,
+  },
+  {
+    name: 'Tables',
+    link: 'tables',
+    show: true,
+  },
+  {
+    name: 'Tickets',
+    link: 'tickets',
+    show: true,
+  },
+  {
+    name: 'Previous Sponsors',
+    link: 'previous',
+    show: true,
+  },
+  {
+    name: 'Venue',
+    link: 'map',
+    show: true,
+  },
+];
+
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [color, setColor] = useState(false);
@@ -117,13 +155,17 @@ const Header = () => {
         <CloseLink onClick={() => setMenu(!menu)}>
           <CloseIcon fill="#fff" />
         </CloseLink>
-        {/* {this.props.routes.map(r => {
-          return r.show ? (
-            <StyledLink key={`nav-${r.slug}`} to={`/${r.slug}`} onClick={e => this.goToSection(r.slug)}>
-              {r.name}
+        {ListOfSections.map(section =>
+          section.show ? (
+            <StyledLink
+              key={`nav-${section.link}`}
+              to={`/#${section.link}`}
+              onClick={() => goToSection(section.link)}
+            >
+              {section.name}
             </StyledLink>
-          ) : null;
-        })} */}
+          ) : null
+        )}
         <StyledLink to="/contact" onClick={() => setMenu(!menu)}>
           Contact
         </StyledLink>

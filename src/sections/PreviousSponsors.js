@@ -39,7 +39,7 @@ const PreviousSponsors = () => {
   `);
 
   return (
-    <BackgroundContainer bg="black">
+    <BackgroundContainer bg="black" id="previous">
       <PreviousSponsorsContainer>
         {data.allPreviousSponsorsYaml.edges.map(({ node }) => (
           <div>
