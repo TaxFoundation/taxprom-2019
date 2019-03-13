@@ -98,7 +98,7 @@ const Header = () => {
     window.addEventListener('scroll', handleHeaderBG);
 
     return () => window.removeEventListener('scroll', handleHeaderBG);
-  }, [window.scrollY]);
+  }, []);
 
   const goToSection = id => {
     scrollToElement(document.getElementById(id), { offset: -56 });
