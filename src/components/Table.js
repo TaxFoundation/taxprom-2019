@@ -71,7 +71,7 @@ const Table = ({ table, id, priceType }) => (
 Table.propTypes = {
   table: PropTypes.object,
   id: PropTypes.string,
-  priceType: PropTypes.number,
+  priceType: PropTypes.string,
 };
 
 export default Table;
