@@ -77,7 +77,7 @@ const Footer = () => (
             For purposes of congressional ethical rules, this dinner is a widely
             attended event. For media credentials,{' '}
             <a href="https://taxfoundation.org/contact/">
-              please contact John Buhl through our website
+              please contact us through our website
             </a>
             .
           </p>
