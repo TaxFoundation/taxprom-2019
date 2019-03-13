@@ -20,7 +20,11 @@ const PreviousSponsors = () => {
   return (
     <ul>
       {data.allPreviousSponsorsYaml.edges
-        .sort((a, b) => a.node.name > b.node.name)
+        .sort((a, b) => {
+          // Chrome only accepts -1, 0, and 1 as sort comparison return values
+          if (a.node.name > b.node.name) return 1;
+          return -1;
+        })
         .map(({ node: sponsor }) =>
           sponsor.link ? (
             <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
