@@ -9,6 +9,8 @@ import Receptions from '../sections/Receptions';
 import Tables from '../sections/Tables';
 import Tickets from '../sections/Tickets';
 import PreviousSponsors from '../sections/PreviousSponsors';
+import EventMap from '../sections/EventMap';
+import Footer from '../sections/Footer';
 
 const IndexPage = () => (
   <Layout>
@@ -24,6 +26,14 @@ const IndexPage = () => (
     <Tables />
     <Tickets />
     <PreviousSponsors />
+    <EventMap
+      date={taxprom.date}
+      id="map"
+      venue={taxprom.venue}
+      address={taxprom.address}
+      url={taxprom.map}
+    />
+    <Footer />
   </Layout>
 );
 
