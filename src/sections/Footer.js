@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+
 import SectionContainer from '../components/SectionContainer';
 import { Logo } from '../components/Icons';
 
@@ -76,10 +78,7 @@ const Footer = () => (
             lobbying. Your gift is tax-deductible to the extent allowed by law.
             For purposes of congressional ethical rules, this dinner is a widely
             attended event. For media credentials,{' '}
-            <a href="https://taxfoundation.org/contact/">
-              please contact us through our website
-            </a>
-            .
+            <Link to="/contact">please contact us</Link>.
           </p>
         </Disclaimer>
       </FooterContent>
