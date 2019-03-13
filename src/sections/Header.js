@@ -91,7 +91,7 @@ const Header = () => {
     function handleHeaderBG(e) {
       if (window.scrollY > 30) {
         setColor(true);
-      } else if (color && window.scrollY <= 30) {
+      } else if (window.scrollY <= 30) {
         setColor(false);
       }
     }
