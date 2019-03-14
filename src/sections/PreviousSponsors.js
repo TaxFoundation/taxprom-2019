@@ -43,6 +43,7 @@ const Heading = styled.h3`
   font-family: ${props => props.theme.fontFamilies.lato};
   font-size: 3rem;
   font-style: normal;
+  text-align: center;
   text-transform: uppercase;
 `;
 

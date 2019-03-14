@@ -26,7 +26,7 @@ const DetailsList = styled.ul`
   grid-gap: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
 `;
 
 const StatisticsList = styled.ul`

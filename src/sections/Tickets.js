@@ -20,6 +20,16 @@ const Container = styled.div`
   }
 `;
 
+const Heading = styled.div`
+  color: ${props => props.theme.yellow};
+  font-family: ${props => props.theme.fontFamilies.lato};
+  font-size: calc(1rem + 3vw);
+  font-style: normal;
+  padding-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+`;
+
 const Tickets = () => {
   let priceType = 'earlyPrice';
   const now = Date.now();
@@ -47,7 +57,7 @@ const Tickets = () => {
     <div id="tickets">
       <BackgroundContainer bg="black" color="blueLight">
         <SectionContainer>
-          <h3>Individual Tickets</h3>
+          <Heading>Individual Tickets</Heading>
           <Container>
             {data.allTicketsYaml.edges.map(({ node: ticket }) => (
               <Ticket
