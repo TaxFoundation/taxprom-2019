@@ -98,7 +98,7 @@ const Details = ({ details, id }) => {
           }
         }
       }
-      table: file(relativePath: { eq: "table.jpg" }) {
+      overhead: file(relativePath: { eq: "overhead.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
@@ -144,7 +144,7 @@ const Details = ({ details, id }) => {
         <PhotoGrid>
           <Photo fluid={images.hodge.childImageSharp.fluid} />
           <Photo fluid={images.angus.childImageSharp.fluid} />
-          <Photo fluid={images.table.childImageSharp.fluid} />
+          <Photo fluid={images.overhead.childImageSharp.fluid} />
           <Photo fluid={images.threeMen.childImageSharp.fluid} />
         </PhotoGrid>
       </BackgroundColorContainer>
