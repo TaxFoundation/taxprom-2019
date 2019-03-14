@@ -46,6 +46,8 @@ const Tickets = () => {
           node {
             name
             price
+            bg
+            color
             benefits
           }
         }

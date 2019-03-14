@@ -1,11 +1,15 @@
 - name: VIP Ticket
   price: 2500
+  bg: blueDark
+  color: white
   benefits:
     - "Includes Premium Seating with Senior Hill Staffers"
     - "Namebadge ribbon recognizing VIP status"
     - "Access to VIP, General, and Dessert Receptions"
 - name: Regular Ticket
   price: 750
+  bg: blueDark
+  color: white
   benefits:
     - "Includes General Seating"
     - "Access to General and Dessert Receptions"
