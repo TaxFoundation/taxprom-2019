@@ -72,7 +72,7 @@ const PreviousSponsors = () => {
         <Heading>Previous Sponsors</Heading>
         <PreviousSponsorsContainer>
           {data.allPreviousSponsorsYaml.edges.map(({ node }) => (
-            <div>
+            <div key={`previous-sponsor-level-${slugify(node.level)}`}>
               <h4>{node.level}</h4>
               <ul>
                 {node.sponsors.map(sponsor =>

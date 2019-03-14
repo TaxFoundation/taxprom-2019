@@ -71,8 +71,8 @@ const Logo = ({ fill, height, width }) => (
 
 Logo.propTypes = {
   fill: PropTypes.string,
-  height: PropTypes.number,
-  width: PropTypes.number,
+  height: PropTypes.string,
+  width: PropTypes.string,
 };
 
 const MenuIcon = ({ fill }) => (
