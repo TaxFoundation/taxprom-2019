@@ -8,10 +8,6 @@ import PhotoA from '../images/a.jpg';
 import PhotoB from '../images/b.jpg';
 import PhotoC from '../images/c.jpg';
 import PhotoD from '../images/d.jpg';
-import PhotoE from '../images/e.jpg';
-import PhotoF from '../images/f.jpg';
-import PhotoG from '../images/g.jpg';
-import PhotoH from '../images/h.jpg';
 
 const TaglineContainer = styled(SectionContainer)`
   padding: 2rem 3rem;
@@ -47,13 +43,15 @@ const StatisticItem = styled.li`
 `;
 
 const StatisticsNumber = styled.p`
+  font-family: ${props => props.theme.fontFamilies.lato};
   font-size: 3rem;
   font-weight: 700;
 `;
 
 const StatisticsText = styled.p`
+  font-family: ${props => props.theme.fontFamilies.baskerville};
   font-size: 1.2rem;
-  text-transform: uppercase;
+  font-style: italic;
 `;
 
 const PhotoGrid = styled.div`
