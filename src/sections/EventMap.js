@@ -8,6 +8,7 @@ import { fullDate } from '../utilities/formatters';
 const InfoHeading = styled.h2`
   font-size: 1.8rem !important;
   line-height: 1.4 !important;
+  text-align center;
 `;
 
 const InfoDetails = styled.p`
@@ -16,6 +17,7 @@ const InfoDetails = styled.p`
 `;
 
 const IframeContainer = styled.div`
+  margin-top: 1rem;
   min-height: 400px;
   padding-bottom: 0.5rem;
 
@@ -31,8 +33,8 @@ const EventMap = ({ date, time, id, venue, address, url }) => (
   <BackgroundContainer bg="black" color="white" id={id}>
     <SectionContainer>
       <InfoHeading>{`${fullDate(new Date(date))}`}</InfoHeading>
-      <InfoDetails>{address}</InfoDetails>
       <InfoDetails>{`${time} at ${venue}`}</InfoDetails>
+      <InfoDetails>{address}</InfoDetails>
       <IframeContainer>
         <iframe src={url} allowFullScreen title="Map to Venue" />
       </IframeContainer>

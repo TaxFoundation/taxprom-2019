@@ -8,6 +8,7 @@ import Details from '../sections/Details';
 import Receptions from '../sections/Receptions';
 import Tables from '../sections/Tables';
 import Tickets from '../sections/Tickets';
+import PhotoGrid2 from '../sections/PhotoGrid2';
 import PreviousSponsors from '../sections/PreviousSponsors';
 import EventMap from '../sections/EventMap';
 import Footer from '../sections/Footer';
@@ -26,6 +27,7 @@ const IndexPage = () => (
     <Receptions />
     <Tables />
     <Tickets />
+    <PhotoGrid2 />
     <PreviousSponsors />
     <EventMap
       date={taxprom.date}
