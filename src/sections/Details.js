@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 import BackgroundColorContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
-import PhotoA from '../images/a.jpg';
-import PhotoB from '../images/b.jpg';
-import PhotoC from '../images/c.jpg';
-import PhotoD from '../images/d.jpg';
+import PhotoA from '../images/hodge-speaks.jpg';
+import PhotoB from '../images/angus-speaks.jpg';
+import PhotoC from '../images/table.jpg';
+import PhotoD from '../images/three-men.jpg';
 
 const TaglineContainer = styled(SectionContainer)`
   padding: 2rem 3rem;

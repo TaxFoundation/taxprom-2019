@@ -15,7 +15,7 @@ const Theme = {
   },
   fontSize: '16px',
   fontWeight: '400',
-  maxWidth: '1440px',
+  maxWidth: '1000px',
   mobileWidth: '480px',
   tfBlue: '#0094ff',
   white: '#fff',
