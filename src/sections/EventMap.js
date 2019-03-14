@@ -10,7 +10,7 @@ const InfoHeading = styled.h2`
   line-height: 1.4 !important;
 `;
 
-const VenueAddress = styled.p`
+const InfoDetails = styled.p`
   font-size: 1.4rem;
   text-align: center;
 `;
@@ -27,11 +27,12 @@ const IframeContainer = styled.div`
   }
 `;
 
-const EventMap = ({ date, id, venue, address, url }) => (
+const EventMap = ({ date, time, id, venue, address, url }) => (
   <BackgroundContainer bg="black" color="white" id={id}>
     <SectionContainer>
-      <InfoHeading>{`${fullDate(new Date(date))} at ${venue}`}</InfoHeading>
-      <VenueAddress>{address}</VenueAddress>
+      <InfoHeading>{`${fullDate(new Date(date))}`}</InfoHeading>
+      <InfoDetails>{address}</InfoDetails>
+      <InfoDetails>{`${time} at ${venue}`}</InfoDetails>
       <IframeContainer>
         <iframe src={url} allowFullScreen title="Map to Venue" />
       </IframeContainer>
@@ -41,6 +42,7 @@ const EventMap = ({ date, id, venue, address, url }) => (
 
 EventMap.propTypes = {
   date: PropTypes.string,
+  time: PropTypes.string,
   id: PropTypes.string,
   venue: PropTypes.string,
   address: PropTypes.string,

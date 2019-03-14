@@ -2,9 +2,10 @@
   price: 2500
   benefits:
     - "Includes Premium Seating with Senior Hill Staffers"
+    - "Namebadge ribbon recognizing VIP status"
     - "Access to VIP, General, and Dessert Receptions"
 - name: Regular Ticket
   price: 750
   benefits:
-  - "Includes General Seating"
-  - "Access to General and Dessert Receptions"
+    - "Includes General Seating"
+    - "Access to General and Dessert Receptions"

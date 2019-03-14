@@ -4,7 +4,7 @@
   "time": "6 p.m.",
   "earlyPriceEnds": "2019-06-24T03:59:59.000Z",
   "regularPriceEnds": "2019-10-14T03:59:59.000Z",
-  "venue": "The National Building Museum",
+  "venueName": "The National Building Museum",
   "address": "440 G Street NW Washington, DC 20001\n",
   "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1635.4125456989918!2d-77.01889256022545!3d38.898095401675505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b78ebcc093af%3A0x78038ee2fd5bf4e5!2s440+G+St+NW%2C+Washington%2C+DC+20548!5e0!3m2!1sen!2sus!4v1508338243019",
   "showCurrentSponsorsSection": true,
@@ -15,18 +15,21 @@
     "youtubeURL": "https://www.youtube.com/embed/AmFST3bnUMQ"
   },
   "details": {
-    "detailsTitle": "Celebrating 82 Years of Promoting Better Tax Policy",
-    "detailsDescription": "For 82 years, the Tax Foundation’s annual dinner has been an institution for the tax community’s best, brightest, and most influential. Join us Thursday, November 21st for our 82nd annual Tax Prom, and find out why hundreds of people say this is the tax world’s most celebrated event of the year.",
     "detailsBullets": [
-      "Engage with more than 700 of the tax community’s most influential executive branch officials, congressional staffers, members of Congress, Fortune 500 companies, trade associations, D.C. firms, and nonprofits.",
-      "Establish yourself or your organization as a critical voice in the tax reform debate.",
-      "Maximize your organization’s visibility among key decision-makers on Capitol Hill.",
-      "Promote your brand to the D.C. tax and policy community."
+      "Engage with more than 650 of the tax community’s most influential executive branch officials, congressional staffers, members of Congress, Fortune 500 companies, trade associations, D.C. firms, and nonprofits.",
+      "Establish your organization as a critical voice in the tax policy and government affair’s world.",
+      "Maximize your organization’s visibility among key decision-makers on Capitol Hill and in the Administration.",
+      "Promote your organization’s brand to the D.C. tax and policy community.."
     ],
     "detailsStatistics": [{
         "number": 187,
         "text": "Congressional Staffers",
         "color": "blueDark"
+      },
+      {
+        "number": 7,
+        "text": "Members of Congress",
+        "color": "yellow"
       },
       {
         "number": 456,
@@ -39,8 +42,8 @@
         "color": "blueLight"
       },
       {
-        "number": 59,
-        "text": "Corporate Sponsors",
+        "number": 5,
+        "text": "Sponsors",
         "color": "yellow"
       }
     ]

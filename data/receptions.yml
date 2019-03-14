@@ -3,11 +3,14 @@
   bg: black
   color: yellow
   benefits:
-    - "Two Platinum large tables (20 people)"
+    - "Sole Sponsor of the 2019 Tax Prom VIP Reception"
+    - "Two Platinum large tables (20 people) with priority seating"
     - "20 tickets to the VIP Reception"
-    - "VIP Reception Branding"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as the VIP Reception Sponsor in the event program provided to all guests"
+    - "Elevated Branding Exposure at VIP Reception"
     - "Branded Napkins"
-    - "Full-page customized message to tax community in the event program provided to all guests"
+    - "Full page company sponsorship recognition spot in the event program provided to all guests"
     - "Opportunity to Give a Toast at the VIP Reception"
     - "Recognition by name from the podium during dinner"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
@@ -16,10 +19,14 @@
   bg: black
   color: yellow
   benefits:
-    - "One Platinum large table (10 people)"
-    - "General Reception Branding"
+    - "Sole Sponsor of the 2019 Tax Prom General Reception"
+    - "One Platinum large table (10 people) with priority seating"
+    - "10 tickets to the VIP Reception"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as the General Reception Sponsor in the event program provided to all guests"
+    - "Elevated Branding Exposure at General Reception "
     - "Branded Napkins"
-    - "Full-page customized message to tax community in the event program provided to all guests"
+    - "Full page customized company recognition spot in the event program provided to all guests"
     - "Recognition by name from the podium during dinner"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
 - name: Dessert Reception
@@ -27,9 +34,14 @@
   bg: black
   color: yellow
   benefits:
-    - "One Platinum large table (10 people)"
-    - "Dessert Reception Branding"
+    - "Sole Sponsor of the 2019 Tax Prom Dessert Reception"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as the Dessert Reception Sponsor in the event program provided to all guests"
+    - "One Platinum large table (10 people) with priority seating"
+    - "10 tickets to the VIP Reception"
+    - "Elevated Branding Exposure at Dessert Reception"
     - "Branded Napkins"
-    - "Full-page customized message to tax community in the event program provided to all guests"
+    - "Full page customized company recognition spot in the event program provided to all guests"
     - "Recognition by name from the podium during dinner"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
+

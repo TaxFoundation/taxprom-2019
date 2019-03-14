@@ -84,13 +84,13 @@ const SectionLink = styled.a`
   }
 `;
 
-const Splash = ({ date, venueName, showVideo }) => {
+const Splash = ({ date, time, venueName, showVideo }) => {
   const splashImg = useStaticQuery(graphql`
     query SplashImg {
       splashImg: file(relativePath: { eq: "splash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -104,7 +104,7 @@ const Splash = ({ date, venueName, showVideo }) => {
         <TaxPromContainer>
           <TaxProm />
         </TaxPromContainer>
-        <InfoText>{fullDate(new Date(date))}</InfoText>
+        <InfoText>{`${fullDate(new Date(date))} at ${time}`}</InfoText>
         <InfoText>{venueName}</InfoText>
         {showVideo ? (
           <SectionLink href="#video">Watch 2018 Recap</SectionLink>
@@ -116,6 +116,7 @@ const Splash = ({ date, venueName, showVideo }) => {
 
 Splash.propTypes = {
   date: PropTypes.string,
+  time: PropTypes.string,
   venueName: PropTypes.string,
   showVideo: PropTypes.bool,
 };

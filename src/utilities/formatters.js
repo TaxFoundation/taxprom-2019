@@ -29,10 +29,20 @@ const fullDate = date => {
     'November',
     'December',
   ];
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+  const theDay = days[date.getDay()];
   const theMonth = months[date.getMonth()];
   const theDate = getOrdinal(date.getDate());
   const theYear = date.getFullYear();
-  return `${theMonth} ${theDate}, ${theYear}`;
+  return `${theDay}, ${theMonth} ${theDate}, ${theYear}`;
 };
 
 const slugify = words => words.replace(/\s+/g, '-').toLowerCase();

@@ -9,11 +9,11 @@
     - "Namebadge ribbon recognizing sponsorship level"
     - "Logo recognition as a Platinum Sponsor in the event program provided to all guests"
     - "10 tickets to the VIP Reception"
-    - "Half-page customized message to tax community in the event program provided to all guests"
-    - "Event website recognition linked to your website"
-    - "Listing or logo recognition on posters at VIP, general, and dessert receptions"
-    - "Opportunity to seat preferred key guests at your table "
-    - "Listing or logo in repeating slideshow during event"
+    - "Half-page customized company recognition spot in the event program provided to all guests"
+    - "Event Website recognition linked to your organization’s website"
+    - "Logo on signage at general and dessert receptions"
+    - "Opportunity to seat preferred key guests at your table"
+    - "Logo in repeating slideshow during event"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
     - "Recognition by name from the podium during dinner"
 - name: Gold
@@ -27,12 +27,13 @@
     - "Namebadge ribbon recognizing sponsorship level"
     - "Logo recognition as a Gold Sponsor in the event program provided to all guests"
     - "4 tickets to the VIP Reception"
-    - "Quarter-page customized message to tax community in the event program provided to all guests"
-    - "Event website recognition linked to your website"
-    - "Listing or logo recognition on posters at VIP, general, and dessert receptions"
-    - "Opportunity to seat preferred key guests at your table "
-    - "Listing or logo in repeating slideshow during event"
+    - "Quarter-page customized company recognition spot in the event program provided to all guests"
+    - "Event Website recognition linked to your organization’s website"
+    - "Logo on signage at general and dessert receptions"
+    - "Opportunity to seat preferred key guests at your table"
+    - "Logo in repeating slideshow during event"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
+
 - name: Silver
   earlyPrice: 12000
   regularPrice: 15000
@@ -44,10 +45,10 @@
     - "Namebadge ribbon recognizing sponsorship level"
     - "Logo recognition as a Silver Sponsor in the event program provided to all guests"
     - "2 tickets to the VIP Reception"
-    - "50% off prices for a customized message to tax community in the event program provided to all guests"
-    - "Event website recognition linked to your website"
-    - "Listing on posters at general and dessert receptions"
+    - "Event Website recognition linked to your organization’s website"
+    - "Logo on signage at general and dessert receptions"
     - "Opportunity to seat key guests at your table"
+    - "Logo in repeating slideshow during event"
 - name: Bronze
   earlyPrice: 8000
   regularPrice: 10000
@@ -58,4 +59,3 @@
     - "Half-Table (4 tickets)"
     - "Namebadge ribbon recognizing sponsorship level"
     - "Listing as Bronze Sponsor in the event programs provided to all guests"
-    - "Event website recognition"

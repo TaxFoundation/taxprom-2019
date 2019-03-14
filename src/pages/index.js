@@ -17,6 +17,7 @@ const IndexPage = () => (
     <SEO title="Join us!" keywords={[`gatsby`, `application`, `react`]} />
     <Splash
       date={taxprom.date}
+      time={taxprom.time}
       venueName={taxprom.venueName}
       showVideo={taxprom.video.showVideo}
     />
@@ -28,8 +29,9 @@ const IndexPage = () => (
     <PreviousSponsors />
     <EventMap
       date={taxprom.date}
+      time={taxprom.time}
       id="map"
-      venue={taxprom.venue}
+      venue={taxprom.venueName}
       address={taxprom.address}
       url={taxprom.map}
     />
