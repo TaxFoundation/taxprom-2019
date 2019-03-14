@@ -64,7 +64,10 @@ exports.createPages = async function({ graphql, actions }) {
     result.data.allTablesYaml.edges.forEach(({ node }) => {
       createPage({
         path: `/join-tax-prom/${slugify(node.name)}`,
-        component: path.resolve(`./src/components/Pledge.js`),
+        component: path.resolve(`./src/components/TablePledge.js`),
+        context: {
+          name: node.name,
+        },
       });
     });
   });

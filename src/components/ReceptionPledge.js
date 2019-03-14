@@ -216,7 +216,7 @@ const ReceptionPledge = ({ data }) => {
     <Layout>
       <StyledForm success={success}>
         <form onSubmit={e => submitForm(e)} required>
-          <Heading>{`I want to sponsor the ${name}.`}</Heading>
+          <Heading>{`I Want to Sponsor the ${name}`}</Heading>
           <div className="tp-name">
             <TextInput
               item="fName"
@@ -264,6 +264,7 @@ const ReceptionPledge = ({ data }) => {
           <div>
             <h1>Thank You!</h1>
             <p>Your pledge has been received. You will hear from us shortly!</p>
+            <StyledLink to="/">← Back to Main Page</StyledLink>
           </div>
         ) : null}
         {error ? (

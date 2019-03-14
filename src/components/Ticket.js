@@ -14,7 +14,7 @@ const TicketBox = styled(SponsorLevel)`
   }
 `;
 
-const Ticket = ({ ticket, id, price }) => (
+const Ticket = ({ ticket, id }) => (
   <TicketBox>
     <h4 className="sponsorship__title">{ticket.name}</h4>
     <p className="sponsorship__price">{dollars(ticket.price)}</p>

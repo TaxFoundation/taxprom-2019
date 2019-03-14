@@ -216,7 +216,7 @@ const TicketPledge = ({ data }) => {
     <Layout>
       <StyledForm success={success}>
         <form onSubmit={e => submitForm(e)} required>
-          <Heading>{`I want to purchase a ${name}.`}</Heading>
+          <Heading>{`I Want to Purchase a ${name}`}</Heading>
           <div className="tp-name">
             <TextInput
               item="fName"
