@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 const SectionContainer = styled.section`
   display: grid;
-  grid-template: auto / minmax(auto, ${props => props.theme.maxWidth});
+  grid-template: auto / minmax(
+      auto,
+      ${props =>
+        props.maxWidth ? `${props.maxWidth}px` : props.theme.maxWidth}
+    );
   justify-content: center;
   line-height: 1.4;
   padding: 0.5rem 1rem;

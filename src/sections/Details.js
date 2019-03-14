@@ -67,7 +67,7 @@ const PhotoGrid = styled.div`
 
   @media (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 25vh);
+    grid-template-rows: repeat(2, 30vh);
   }
 `;
 
@@ -118,7 +118,7 @@ const Details = ({ details, id }) => {
   return (
     <>
       <BackgroundColorContainer bg="black" color="white">
-        <TaglineContainer>
+        <TaglineContainer maxWidth={600}>
           <h2>Celebrating 82 Years of Promoting Better Tax Policy</h2>
           <p>
             Since our founding in 1937, the Tax Foundation has been the nation’s
@@ -150,13 +150,15 @@ const Details = ({ details, id }) => {
       </BackgroundColorContainer>
       <BackgroundColorContainer bg="black" color="white">
         <div id={id}>
-          <SectionContainer>
+          <SectionContainer maxWidth={600}>
             <h3>Why You Can't Miss Tax Prom</h3>
             <DetailsList>
               {details.detailsBullets.map((d, i) => (
                 <li key={`detail-${i}`}>{d}</li>
               ))}
             </DetailsList>
+          </SectionContainer>
+          <SectionContainer>
             <h4>In 2018 Tax Prom was Joined By</h4>
             <StatisticsList statsNumber={details.detailsStatistics.length}>
               {details.detailsStatistics.map((d, i) => (
