@@ -8,7 +8,7 @@ import { fullDate } from '../utilities/formatters';
 const InfoHeading = styled.h2`
   font-size: 1.8rem !important;
   line-height: 1.4 !important;
-  text-align center;
+  text-align: center;
 `;
 
 const InfoDetails = styled.p`
