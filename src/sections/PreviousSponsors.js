@@ -6,11 +6,13 @@ import BackgroundContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
 import { slugify } from '../utilities/formatters';
 
-const PreviousSponsorsContainer = styled(SectionContainer)`
+const PreviousSponsorsContainer = styled.div`
   color: #fff;
+  display: grid;
   grid-gap: 3rem;
   grid-template: repeat(3, auto) / repeat(12, 1fr);
   text-align: center;
+  width: 100%;
 
   & div:nth-child(-n + 3) {
     grid-column: span 4;
@@ -66,33 +68,35 @@ const PreviousSponsors = () => {
 
   return (
     <BackgroundContainer bg="black" id="previous">
-      <Heading>Previous Sponsors</Heading>
-      <PreviousSponsorsContainer>
-        {data.allPreviousSponsorsYaml.edges.map(({ node }) => (
-          <div>
-            <h4>{node.level}</h4>
-            <ul>
-              {node.sponsors.map(sponsor =>
-                sponsor.link ? (
-                  <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-                    <a
-                      href={sponsor.link}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
+      <SectionContainer>
+        <Heading>Previous Sponsors</Heading>
+        <PreviousSponsorsContainer>
+          {data.allPreviousSponsorsYaml.edges.map(({ node }) => (
+            <div>
+              <h4>{node.level}</h4>
+              <ul>
+                {node.sponsors.map(sponsor =>
+                  sponsor.link ? (
+                    <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
+                      <a
+                        href={sponsor.link}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {sponsor.name}
+                      </a>
+                    </li>
+                  ) : (
+                    <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
                       {sponsor.name}
-                    </a>
-                  </li>
-                ) : (
-                  <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-                    {sponsor.name}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-        ))}
-      </PreviousSponsorsContainer>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+          ))}
+        </PreviousSponsorsContainer>
+      </SectionContainer>
     </BackgroundContainer>
   );
 };
