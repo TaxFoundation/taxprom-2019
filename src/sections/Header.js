@@ -139,7 +139,7 @@ const Header = () => {
   }, []);
 
   const goToSection = id => {
-    scrollToElement(document.getElementById(id), { offset: -56 });
+    scrollToElement(document.getElementById(id), { offset: -54 });
     setMenu(!menu);
   };
 
