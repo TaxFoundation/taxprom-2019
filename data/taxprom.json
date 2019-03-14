@@ -29,22 +29,22 @@
       {
         "number": 7,
         "text": "Members of Congress",
-        "color": "yellow"
+        "color": "blue"
       },
       {
         "number": 456,
         "text": "Tax and Policy Professionals from the private sector",
-        "color": "blue"
+        "color": "blueLight"
       },
       {
         "number": 650,
         "text": "Total Policy Professionals in attendance",
-        "color": "blueLight"
+        "color": "blue"
       },
       {
-        "number": 5,
+        "number": 58,
         "text": "Sponsors",
-        "color": "yellow"
+        "color": "blueDark"
       }
     ]
   }
