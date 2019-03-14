@@ -51,7 +51,7 @@ const Sponsorships = () => {
   `);
 
   return (
-    <div id="tables">
+    <div id="receptions">
       <BackgroundContainer bg="black" color="white">
         <SectionContainer>
           <Heading>Reception Sponsorships</Heading>
