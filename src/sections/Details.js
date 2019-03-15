@@ -6,6 +6,7 @@ import Img from 'gatsby-image';
 
 import BackgroundColorContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
+import PhotoGrid1 from './PhotoGrid1';
 
 const TaglineContainer = styled(SectionContainer)`
   padding: 2rem 1rem;
@@ -61,9 +62,13 @@ const PhotoGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 25vh);
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1000px) and (max-width: 1659px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 30vh);
+  }
+
+  @media screen and (min-width: 1660px) {
+    grid-template-rows: repeat(2, 50vh);
   }
 `;
 
@@ -77,45 +82,11 @@ const Photo = styled(Img)`
   }
 `;
 
-const Details = ({ details, id }) => {
-  const images = useStaticQuery(graphql`
-    query DetailsImages {
-      hodge: file(relativePath: { eq: "hodge-speaks.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, quality: 80) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      angus: file(relativePath: { eq: "angus-speaks.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, quality: 80) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      overhead: file(relativePath: { eq: "overhead.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, quality: 80) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      threeMen: file(relativePath: { eq: "three-men.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, quality: 80) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
-
-  return (
+const Details = ({ details, id }) => (
     <>
       <BackgroundColorContainer bg="black" color="white">
         <TaglineContainer id={id} maxWidth={600}>
-          <h2>Celebrating 82 Years of Promoting Better Tax Policy</h2>
+          <h2>Bringing Together Today’s Tax Leaders</h2>
           <p>
             For 82 years, Tax Prom has been the must-attend event for the tax
             world’s best, brightest, and most influential.
@@ -132,12 +103,7 @@ const Details = ({ details, id }) => {
         </TaglineContainer>
       </BackgroundColorContainer>
       <BackgroundColorContainer bg="black" color="white">
-        <PhotoGrid>
-          <Photo fluid={images.hodge.childImageSharp.fluid} />
-          <Photo fluid={images.angus.childImageSharp.fluid} />
-          <Photo fluid={images.overhead.childImageSharp.fluid} />
-          <Photo fluid={images.threeMen.childImageSharp.fluid} />
-        </PhotoGrid>
+        <PhotoGrid1 />
       </BackgroundColorContainer>
       <BackgroundColorContainer bg="black" color="white">
         <SectionContainer maxWidth={600}>
@@ -162,7 +128,6 @@ const Details = ({ details, id }) => {
       </BackgroundColorContainer>
     </>
   );
-};
 
 Details.propTypes = {
   details: PropTypes.object,

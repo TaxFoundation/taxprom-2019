@@ -4,31 +4,31 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundContainer from '../components/BackgroundContainer';
 import { PhotoGrid, Photo } from '../components/PhotoGrid';
 
-const PhotoGrid2 = () => {
+const PhotoGrid1 = () => {
   const images = useStaticQuery(graphql`
-    query PhotGrid2Images {
-      hodge: file(relativePath: { eq: "hodge-stage.jpg" }) {
+    query PhotoGrid1mages {
+      hodge: file(relativePath: { eq: "hodge-speaks.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      twoMen: file(relativePath: { eq: "two-men.jpg" }) {
+      angus: file(relativePath: { eq: "angus-speaks.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      weinberger: file(relativePath: { eq: "weinberger.jpg" }) {
+      overhead: file(relativePath: { eq: "overhead.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      vogler: file(relativePath: { eq: "vogler-speaks.jpg" }) {
+      threeMen: file(relativePath: { eq: "three-men.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
@@ -42,12 +42,12 @@ const PhotoGrid2 = () => {
     <BackgroundContainer bg="black" color="white">
       <PhotoGrid>
         <Photo fluid={images.hodge.childImageSharp.fluid} />
-        <Photo fluid={images.twoMen.childImageSharp.fluid} />
-        <Photo fluid={images.weinberger.childImageSharp.fluid} />
-        <Photo fluid={images.vogler.childImageSharp.fluid} />
+        <Photo fluid={images.angus.childImageSharp.fluid} />
+        <Photo fluid={images.overhead.childImageSharp.fluid} />
+        <Photo fluid={images.threeMen.childImageSharp.fluid} />
       </PhotoGrid>
     </BackgroundContainer>
   );
 };
 
-export default PhotoGrid2;
+export default PhotoGrid1;
