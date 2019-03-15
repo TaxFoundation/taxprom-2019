@@ -12,10 +12,10 @@ import PhotoC from '../images/table.jpg';
 import PhotoD from '../images/three-men.jpg';
 
 const TaglineContainer = styled(SectionContainer)`
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
 
   @media (min-width: 500px) {
-    padding: 5rem 9rem;
+    padding: 5rem 0;
   }
 
   p {
@@ -118,7 +118,7 @@ const Details = ({ details, id }) => {
   return (
     <>
       <BackgroundColorContainer bg="black" color="white">
-        <TaglineContainer maxWidth={600}>
+        <TaglineContainer id={id} maxWidth={600}>
           <h2>Celebrating 82 Years of Promoting Better Tax Policy</h2>
           <p>
             Since our founding in 1937, the Tax Foundation has been the nation’s
@@ -149,27 +149,25 @@ const Details = ({ details, id }) => {
         </PhotoGrid>
       </BackgroundColorContainer>
       <BackgroundColorContainer bg="black" color="white">
-        <div id={id}>
-          <SectionContainer maxWidth={600}>
-            <h3>Why You Can't Miss Tax Prom</h3>
-            <DetailsList>
-              {details.detailsBullets.map((d, i) => (
-                <li key={`detail-${i}`}>{d}</li>
-              ))}
-            </DetailsList>
-          </SectionContainer>
-          <SectionContainer>
-            <h4>In 2018 Tax Prom was Joined By</h4>
-            <StatisticsList statsNumber={details.detailsStatistics.length}>
-              {details.detailsStatistics.map((d, i) => (
-                <StatisticItem key={`stat-${i}`} color={d.color}>
-                  <StatisticsNumber>{d.number}</StatisticsNumber>
-                  <StatisticsText>{d.text}</StatisticsText>
-                </StatisticItem>
-              ))}
-            </StatisticsList>
-          </SectionContainer>
-        </div>
+        <SectionContainer maxWidth={600}>
+          <h3>Why You Can't Miss Tax Prom</h3>
+          <DetailsList>
+            {details.detailsBullets.map((d, i) => (
+              <li key={`detail-${i}`}>{d}</li>
+            ))}
+          </DetailsList>
+        </SectionContainer>
+        <SectionContainer>
+          <h4>In 2018 Tax Prom was Joined By</h4>
+          <StatisticsList statsNumber={details.detailsStatistics.length}>
+            {details.detailsStatistics.map((d, i) => (
+              <StatisticItem key={`stat-${i}`} color={d.color}>
+                <StatisticsNumber>{d.number}</StatisticsNumber>
+                <StatisticsText>{d.text}</StatisticsText>
+              </StatisticItem>
+            ))}
+          </StatisticsList>
+        </SectionContainer>
       </BackgroundColorContainer>
     </>
   );
