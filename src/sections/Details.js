@@ -6,10 +6,6 @@ import Img from 'gatsby-image';
 
 import BackgroundColorContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
-import PhotoA from '../images/hodge-speaks.jpg';
-import PhotoB from '../images/angus-speaks.jpg';
-import PhotoC from '../images/table.jpg';
-import PhotoD from '../images/three-men.jpg';
 
 const TaglineContainer = styled(SectionContainer)`
   padding: 2rem 1rem;
