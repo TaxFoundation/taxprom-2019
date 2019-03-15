@@ -10,25 +10,8 @@ const PreviousSponsorsContainer = styled.div`
   color: #fff;
   display: grid;
   grid-gap: 3rem;
-  grid-template: repeat(3, auto) / repeat(12, 1fr);
   text-align: center;
   width: 100%;
-
-  & div:nth-child(-n + 3) {
-    grid-column: span 4;
-
-    h4 {
-      font-size: 1.6rem;
-    }
-
-    li {
-      font-size: 1.2rem;
-    }
-  }
-
-  & div:nth-child(n + 4):nth-child(-n + 7) {
-    grid-column: span 6;
-  }
 
   a {
     color: #fff;
@@ -36,6 +19,25 @@ const PreviousSponsorsContainer = styled.div`
 
     &:visited {
       color: #fff;
+    }
+  }
+
+  @media screen and (min-width: 530px) {
+    grid-template: repeat(3, auto) / repeat(12, 1fr);
+    & div:nth-child(-n + 3) {
+      grid-column: span 4;
+
+      h4 {
+        font-size: 1.6rem;
+      }
+
+      li {
+        font-size: 1.2rem;
+      }
+    }
+
+    & div:nth-child(n + 4):nth-child(-n + 7) {
+      grid-column: span 6;
     }
   }
 `;
