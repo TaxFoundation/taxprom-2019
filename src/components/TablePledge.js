@@ -273,8 +273,8 @@ const TablePledge = ({ data }) => {
           <div>
             <h1>Thank You!</h1>
             <p>
-              Your request for a ticket has been received. You will hear from us
-              shortly!
+              Your request to sponsor a table has been received. You will hear
+              from us shortly!
             </p>
           </div>
         ) : null}

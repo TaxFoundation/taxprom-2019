@@ -263,7 +263,10 @@ const ReceptionPledge = ({ data }) => {
         {success ? (
           <div>
             <h1>Thank You!</h1>
-            <p>Your pledge has been received. You will hear from us shortly!</p>
+            <p>
+              Your request to sponsor a reception been received. You will hear
+              from us shortly!
+            </p>
             <StyledLink to="/">← Back to Main Page</StyledLink>
           </div>
         ) : null}
