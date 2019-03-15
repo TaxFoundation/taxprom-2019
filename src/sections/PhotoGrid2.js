@@ -28,7 +28,7 @@ const PhotoGrid2 = () => {
           }
         }
       }
-      vogler: file(relativePath: { eq: "vogler-speaks.jpg" }) {
+      bill: file(relativePath: { eq: "bill.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
@@ -44,7 +44,7 @@ const PhotoGrid2 = () => {
         <Photo fluid={images.hodge.childImageSharp.fluid} />
         <Photo fluid={images.twoMen.childImageSharp.fluid} />
         <Photo fluid={images.weinberger.childImageSharp.fluid} />
-        <Photo fluid={images.vogler.childImageSharp.fluid} />
+        <Photo fluid={images.bill.childImageSharp.fluid} />
       </PhotoGrid>
     </BackgroundContainer>
   );
