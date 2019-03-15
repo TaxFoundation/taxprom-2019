@@ -118,7 +118,7 @@ const Details = ({ details, id }) => {
           <h2>Celebrating 82 Years of Promoting Better Tax Policy</h2>
           <p>
             Since our founding in 1937, the Tax Foundation has been the nation’s
-            leading independent tax policy nonprofits. Our principled research,
+            leading independent tax policy nonprofit. Our principled research,
             insightful analysis, and engaged experts have informed smarter tax
             policy at the federal, state, and global levels.
           </p>
