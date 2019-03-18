@@ -135,6 +135,12 @@ const Header = () => {
     }
     window.addEventListener('scroll', handleHeaderBG);
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister();
+      });
+    }
+
     return () => window.removeEventListener('scroll', handleHeaderBG);
   }, []);
 
