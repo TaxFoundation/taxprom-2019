@@ -136,6 +136,7 @@ const Header = () => {
     window.addEventListener('scroll', handleHeaderBG);
 
     if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
       navigator.serviceWorker.ready.then(registration => {
         registration.unregister();
       });
