@@ -83,51 +83,51 @@ const Photo = styled(Img)`
 `;
 
 const Details = ({ details, id }) => (
-    <>
-      <BackgroundColorContainer bg="black" color="white">
-        <TaglineContainer id={id} maxWidth={600}>
-          <h2>Bringing Together Today’s Tax Leaders</h2>
-          <p>
-            For 82 years, Tax Prom has been the must-attend event for the tax
-            world’s best, brightest, and most influential.
-          </p>
-          <p>
-            From Capitol Hill tax writers to VPs of tax at Fortune 500
-            companies, Tax Prom is the one night a year that brings together
-            every major tax policy decision-maker in the country.
-          </p>
-          <p>
-            Join us Thursday, November 21st and find out why Tax Prom is an
-            event you can’t afford to miss.
-          </p>
-        </TaglineContainer>
-      </BackgroundColorContainer>
-      <BackgroundColorContainer bg="black" color="white">
-        <PhotoGrid1 />
-      </BackgroundColorContainer>
-      <BackgroundColorContainer bg="black" color="white">
-        <SectionContainer maxWidth={600}>
-          <h3>Why You Can't Miss Tax Prom</h3>
-          <DetailsList>
-            {details.detailsBullets.map((d, i) => (
-              <li key={`detail-${i}`}>{d}</li>
-            ))}
-          </DetailsList>
-        </SectionContainer>
-        <SectionContainer>
-          <h4>In 2018 Tax Prom was Joined By</h4>
-          <StatisticsList statsNumber={details.detailsStatistics.length}>
-            {details.detailsStatistics.map((d, i) => (
-              <StatisticItem key={`stat-${i}`} color={d.color}>
-                <StatisticsNumber>{d.number}</StatisticsNumber>
-                <StatisticsText>{d.text}</StatisticsText>
-              </StatisticItem>
-            ))}
-          </StatisticsList>
-        </SectionContainer>
-      </BackgroundColorContainer>
-    </>
-  );
+  <>
+    <BackgroundColorContainer bg="black" color="white">
+      <TaglineContainer id={id} maxWidth={600}>
+        <h2>Bringing Together Today’s Tax Leaders</h2>
+        <p>
+          For 82 years, Tax Prom has been the must-attend event for the tax
+          world’s best, brightest, and most influential.
+        </p>
+        <p>
+          From Capitol Hill tax writers to VPs of tax at Fortune 500 companies,
+          Tax Prom is the one night a year that brings together every major tax
+          policy decision-maker in the country.
+        </p>
+        <p>
+          Join us Thursday, November 21st and find out why Tax Prom is an event
+          you can’t afford to miss.
+        </p>
+      </TaglineContainer>
+    </BackgroundColorContainer>
+    <BackgroundColorContainer bg="black" color="white">
+      <PhotoGrid1 />
+    </BackgroundColorContainer>
+    <BackgroundColorContainer bg="black" color="white">
+      <SectionContainer maxWidth={600}>
+        <h3>Why You Can't Miss Tax Prom</h3>
+        <DetailsList>
+          {details.detailsBullets.map((d, i) => (
+            <li key={`detail-${i}`}>{d}</li>
+          ))}
+        </DetailsList>
+      </SectionContainer>
+      <SectionContainer>
+        <h4>In 2018 Tax Prom was Joined By</h4>
+        <StatisticsList statsNumber={details.detailsStatistics.length}>
+          {details.detailsStatistics.map((d, i) => (
+            <StatisticItem key={`stat-${i}`} color={d.color}>
+              <StatisticsNumber>{d.number}</StatisticsNumber>
+              <StatisticsText>{d.text}</StatisticsText>
+            </StatisticItem>
+          ))}
+        </StatisticsList>
+      </SectionContainer>
+    </BackgroundColorContainer>
+  </>
+);
 
 Details.propTypes = {
   details: PropTypes.object,
