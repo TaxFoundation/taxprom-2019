@@ -29,12 +29,22 @@ const IframeContainer = styled.div`
   }
 `;
 
-const EventMap = ({ date, time, id, venue, address, url }) => (
+const EventMap = ({
+  date,
+  time,
+  id,
+  venue,
+  streetAddress,
+  city,
+  state,
+  zip,
+  url,
+}) => (
   <BackgroundContainer bg="black" color="white" id={id}>
     <SectionContainer>
       <InfoHeading>{`${fullDate(new Date(date))}`}</InfoHeading>
       <InfoDetails>{`${time} at ${venue}`}</InfoDetails>
-      <InfoDetails>{address}</InfoDetails>
+      <InfoDetails>{`${streetAddress}, ${city} ${state}, ${zip}`}</InfoDetails>
       <IframeContainer>
         <iframe src={url} allowFullScreen title="Map to Venue" />
       </IframeContainer>
@@ -47,7 +57,10 @@ EventMap.propTypes = {
   time: PropTypes.string,
   id: PropTypes.string,
   venue: PropTypes.string,
-  address: PropTypes.string,
+  streetAddress: PropTypes.string,
+  city: PropTypes.string,
+  state: PropTypes.string,
+  zip: PropTypes.number,
   url: PropTypes.string,
 };
 

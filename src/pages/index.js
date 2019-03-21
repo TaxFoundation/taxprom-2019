@@ -34,7 +34,10 @@ const IndexPage = () => (
       time={taxprom.time}
       id="map"
       venue={taxprom.venueName}
-      address={taxprom.address}
+      streetAddress={taxprom.streetAddress}
+      city={taxprom.city}
+      state={taxprom.state}
+      zip={taxprom.zip}
       url={taxprom.map}
     />
     <Footer />

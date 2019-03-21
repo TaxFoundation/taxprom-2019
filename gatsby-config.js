@@ -4,7 +4,7 @@ module.exports = {
     description: `Celebrating 82 Years of Promoting Better Tax Policy`,
     author: `@taxfoundation`,
     siteUrl: 'https://taxprom.com',
-    siteMetaImage: '/images/siteMetaImage.jpg',
+    siteMetaImage: '/siteMetaImage.jpg',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
