@@ -1,14 +1,47 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import taxprom from '../../data/taxprom.json';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Splash from '../sections/Splash';
+import Details from '../sections/Details';
+import Receptions from '../sections/Receptions';
+import Tables from '../sections/Tables';
+import Tickets from '../sections/Tickets';
+import PhotoGrid2 from '../sections/PhotoGrid2';
+import PreviousSponsors from '../sections/PreviousSponsors';
+import EventMap from '../sections/EventMap';
+import Footer from '../sections/Footer';
 
-const NotFoundPage = () => (
+const IndexPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO title="Join us!" keywords={[`gatsby`, `application`, `react`]} />
+    <Splash
+      date={taxprom.date}
+      time={taxprom.time}
+      venueName={taxprom.venueName}
+      showVideo={taxprom.video.showVideo}
+    />
+    <Details details={taxprom.details} id="details" />
+    {/* Awardees */}
+    <Receptions />
+    <Tables />
+    <Tickets />
+    <PhotoGrid2 />
+    <PreviousSponsors />
+    <EventMap
+      date={taxprom.date}
+      time={taxprom.time}
+      id="map"
+      venue={taxprom.venueName}
+      streetAddress={taxprom.streetAddress}
+      city={taxprom.city}
+      state={taxprom.state}
+      zip={taxprom.zip}
+      url={taxprom.map}
+    />
+    <Footer />
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default IndexPage;
