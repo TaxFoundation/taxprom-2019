@@ -16,11 +16,6 @@ const Container = styled.div`
 
   @media (min-width: 860px) {
     grid-template-columns: repeat(2, 1fr);
-
-    & #reception-vip-reception {
-      grid-column: 1 / 3;
-    }
-  }
 `;
 
 const Heading = styled.div`
