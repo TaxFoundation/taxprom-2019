@@ -124,6 +124,17 @@ const ListOfSections = [
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [color, setColor] = useState(false);
+  const [firstVisit, setFirstVisit] = useState(true);
+
+  const goToSection = id => {
+    console.log(id);
+    scrollToElement(document.getElementById(id), { offset: -54 });
+  };
+
+  const goToMenuItem = id => {
+    goToSection(id);
+    setMenu(!menu);
+  };
 
   useEffect(() => {
     function handleHeaderBG(e) {
@@ -135,13 +146,16 @@ const Header = () => {
     }
     window.addEventListener('scroll', handleHeaderBG);
 
+    if (firstVisit) {
+      setFirstVisit(false);
+      const hash = window.location.hash.substr(1);
+      if (hash) {
+        goToSection(hash);
+      }
+    }
+
     return () => window.removeEventListener('scroll', handleHeaderBG);
   }, []);
-
-  const goToSection = id => {
-    scrollToElement(document.getElementById(id), { offset: -54 });
-    setMenu(!menu);
-  };
 
   return (
     <StyledHeader backgroundColor={color}>
@@ -160,7 +174,7 @@ const Header = () => {
             <StyledLink
               key={`nav-${section.link}`}
               to={`/#${section.link}`}
-              onClick={() => goToSection(section.link)}
+              onClick={() => goToMenuItem(section.link)}
             >
               {section.name}
             </StyledLink>

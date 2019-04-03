@@ -3,7 +3,7 @@ module.exports = {
     title: `Tax Prom 2019`,
     description: `Celebrating 82 Years of Promoting Better Tax Policy`,
     author: `@taxfoundation`,
-    siteUrl: 'https://taxprom.com',
+    siteUrl: 'https://2019.taxprom.com',
     siteMetaImage: '/siteMetaImage.jpg',
   },
   plugins: [
