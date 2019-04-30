@@ -6,7 +6,7 @@ import BackgroundContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
 import { slugify } from '../utilities/formatters';
 
-const PreviousSponsorsContainer = styled.div`
+const SponsorsContainer = styled.div`
   color: #fff;
   display: grid;
   grid-gap: 3rem;
@@ -28,19 +28,19 @@ const PreviousSponsorsContainer = styled.div`
       grid-column: span 4;
 
       h4 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
 
       li {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
     }
 
     & div:nth-child(n + 4):nth-child(-n + 7) {
       grid-column: span 6;
 
-      li {
-        font-size: 0.9rem;
+      h4 {
+        font-size: 1.6rem;
       }
     }
   }
@@ -49,16 +49,16 @@ const PreviousSponsorsContainer = styled.div`
 const Heading = styled.h3`
   color: ${props => props.theme.yellow};
   font-family: ${props => props.theme.fontFamilies.lato};
-  font-size: 3rem;
+  font-size: 4rem;
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
 `;
 
-const PreviousSponsors = () => {
+const Sponsors = () => {
   const data = useStaticQuery(graphql`
-    query PreviousSponsorsQuery {
-      allPreviousSponsorsYaml {
+    query SponsorsQuery {
+      allSponsorsYaml {
         edges {
           node {
             level
@@ -75,9 +75,9 @@ const PreviousSponsors = () => {
   return (
     <BackgroundContainer bg="black" id="previous">
       <SectionContainer>
-        <Heading>Previous Sponsors</Heading>
-        <PreviousSponsorsContainer>
-          {data.allPreviousSponsorsYaml.edges.map(({ node }) => (
+        <Heading>Sponsors</Heading>
+        <SponsorsContainer>
+          {data.allSponsorsYaml.edges.map(({ node }) => (
             <div key={`previous-sponsor-level-${slugify(node.level)}`}>
               <h4>{node.level}</h4>
               <ul>
@@ -101,10 +101,10 @@ const PreviousSponsors = () => {
               </ul>
             </div>
           ))}
-        </PreviousSponsorsContainer>
+        </SponsorsContainer>
       </SectionContainer>
     </BackgroundContainer>
   );
 };
 
-export default PreviousSponsors;
+export default Sponsors;
