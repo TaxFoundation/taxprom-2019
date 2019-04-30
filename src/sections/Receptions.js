@@ -16,6 +16,7 @@ const Container = styled.div`
 
   @media (min-width: 860px) {
     grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const Heading = styled.div`
