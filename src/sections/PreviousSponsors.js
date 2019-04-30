@@ -49,7 +49,7 @@ const PreviousSponsorsContainer = styled.div`
 const Heading = styled.h3`
   color: ${props => props.theme.yellow};
   font-family: ${props => props.theme.fontFamilies.lato};
-  font-size: 3rem;
+  font-size: calc(1rem + 3vw);
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
