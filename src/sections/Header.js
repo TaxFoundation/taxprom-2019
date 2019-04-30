@@ -110,6 +110,11 @@ const ListOfSections = [
     show: true,
   },
   {
+    name: 'Sponsors',
+    link: 'sponsors',
+    show: true,
+  },
+  {
     name: 'Previous Sponsors',
     link: 'previous',
     show: true,

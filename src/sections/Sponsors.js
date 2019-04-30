@@ -73,7 +73,7 @@ const Sponsors = () => {
   `);
 
   return (
-    <BackgroundContainer bg="black" id="previous">
+    <BackgroundContainer bg="black" id="sponsors">
       <SectionContainer>
         <Heading>Sponsors</Heading>
         <SponsorsContainer>
