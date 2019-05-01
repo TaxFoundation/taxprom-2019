@@ -80,25 +80,27 @@ const Sponsors = () => {
           {data.allSponsorsYaml.edges.map(({ node }) => (
             <div key={`previous-sponsor-level-${slugify(node.level)}`}>
               <h4>{node.level}</h4>
-              <ul>
-                {node.sponsors.map(sponsor =>
-                  sponsor.link ? (
-                    <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-                      <a
-                        href={sponsor.link}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
+              {node.sponsors && (
+                <ul>
+                  {node.sponsors.map(sponsor =>
+                    sponsor.link ? (
+                      <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
+                        <a
+                          href={sponsor.link}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          {sponsor.name}
+                        </a>
+                      </li>
+                    ) : (
+                      <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
                         {sponsor.name}
-                      </a>
-                    </li>
-                  ) : (
-                    <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-                      {sponsor.name}
-                    </li>
-                  )
-                )}
-              </ul>
+                      </li>
+                    )
+                  )}
+                </ul>
+              )}
             </div>
           ))}
         </SponsorsContainer>
