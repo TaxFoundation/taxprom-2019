@@ -142,7 +142,6 @@ const Sponsors = () => {
             .filter(({ node }) => !node.isReception)
             .map(
               ({ node }) =>
-                !node.isReception &&
                 node.sponsors && (
                   <SponsorList
                     key={`sponsor-${slugify(node.level)}`}
