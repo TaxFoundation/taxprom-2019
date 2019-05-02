@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -97,6 +98,10 @@ const SponsorList = ({ node }) => (
   </div>
 );
 
+SponsorList.propTypes = {
+  node: PropTypes.object,
+};
+
 const Sponsors = () => {
   const data = useStaticQuery(graphql`
     query SponsorsQuery {
@@ -114,35 +119,37 @@ const Sponsors = () => {
       }
     }
   `);
-  console.log(data.allSponsorsYaml.edges);
 
   return (
     <BackgroundContainer bg="black" id="sponsors">
       <SectionContainer>
         <Heading>Sponsors</Heading>
         <ReceptionsContainer>
-          {data.allSponsorsYaml.edges.map(
-            ({ node }) =>
-              node.isReception &&
-              node.sponsors && (
-                <SponsorList
-                  key={`sponsor-${slugify(node.level)}`}
-                  node={node}
-                />
-              )
-          )}
+          {data.allSponsorsYaml.edges
+            .filter(({ node }) => node.isReception)
+            .map(
+              ({ node }) =>
+                node.sponsors && (
+                  <SponsorList
+                    key={`sponsor-${slugify(node.level)}`}
+                    node={node}
+                  />
+                )
+            )}
         </ReceptionsContainer>
         <TablesContainer>
-          {data.allSponsorsYaml.edges.map(
-            ({ node }) =>
-              !node.isReception &&
-              node.sponsors && (
-                <SponsorList
-                  key={`sponsor-${slugify(node.level)}`}
-                  node={node}
-                />
-              )
-          )}
+          {data.allSponsorsYaml.edges
+            .filter(({ node }) => !node.isReception)
+            .map(
+              ({ node }) =>
+                !node.isReception &&
+                node.sponsors && (
+                  <SponsorList
+                    key={`sponsor-${slugify(node.level)}`}
+                    node={node}
+                  />
+                )
+            )}
         </TablesContainer>
       </SectionContainer>
     </BackgroundContainer>
