@@ -132,7 +132,6 @@ const Header = () => {
   const [firstVisit, setFirstVisit] = useState(true);
 
   const goToSection = id => {
-    console.log(id);
     scrollToElement(document.getElementById(id), { offset: -54 });
   };
 

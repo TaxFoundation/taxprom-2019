@@ -6,7 +6,7 @@ import BackgroundContainer from '../components/BackgroundContainer';
 import SectionContainer from '../components/SectionContainer';
 import { slugify } from '../utilities/formatters';
 
-const SponsorsContainer = styled.div`
+const ReceptionsContainer = styled.div`
   color: #fff;
   display: grid;
   grid-gap: 3rem;
@@ -23,8 +23,8 @@ const SponsorsContainer = styled.div`
   }
 
   @media screen and (min-width: 530px) {
-    grid-template: repeat(3, auto) / repeat(12, 1fr);
-    & div:nth-child(-n + 3) {
+    grid-template: auto / repeat(3, 1fr);
+    & div {
       grid-column: span 4;
 
       h4 {
@@ -35,9 +35,30 @@ const SponsorsContainer = styled.div`
         font-size: 1.2rem;
       }
     }
+  }
+`;
 
-    & div:nth-child(n + 4):nth-child(-n + 7) {
-      grid-column: span 6;
+const TablesContainer = styled.div`
+  color: #fff;
+  display: grid;
+  grid-gap: 3rem;
+  text-align: center;
+  width: 100%;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  @media screen and (min-width: 530px) {
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+
+    & div {
+      grid-column: span 1;
 
       h4 {
         font-size: 1.6rem;
@@ -55,6 +76,27 @@ const Heading = styled.h3`
   text-transform: uppercase;
 `;
 
+const SponsorList = ({ node }) => (
+  <div>
+    <h4>{node.level}</h4>
+    <ul>
+      {node.sponsors.map(sponsor =>
+        sponsor.link ? (
+          <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
+            <a href={sponsor.link} rel="noopener noreferrer" target="_blank">
+              {sponsor.name}
+            </a>
+          </li>
+        ) : (
+          <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
+            {sponsor.name}
+          </li>
+        )
+      )}
+    </ul>
+  </div>
+);
+
 const Sponsors = () => {
   const data = useStaticQuery(graphql`
     query SponsorsQuery {
@@ -62,6 +104,7 @@ const Sponsors = () => {
         edges {
           node {
             level
+            isReception
             sponsors {
               name
               link
@@ -71,39 +114,36 @@ const Sponsors = () => {
       }
     }
   `);
+  console.log(data.allSponsorsYaml.edges);
 
   return (
     <BackgroundContainer bg="black" id="sponsors">
       <SectionContainer>
         <Heading>Sponsors</Heading>
-        <SponsorsContainer>
-          {data.allSponsorsYaml.edges.map(({ node }) => (
-            <div key={`previous-sponsor-level-${slugify(node.level)}`}>
-              <h4>{node.level}</h4>
-              {node.sponsors && (
-                <ul>
-                  {node.sponsors.map(sponsor =>
-                    sponsor.link ? (
-                      <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-                        <a
-                          href={sponsor.link}
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          {sponsor.name}
-                        </a>
-                      </li>
-                    ) : (
-                      <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-                        {sponsor.name}
-                      </li>
-                    )
-                  )}
-                </ul>
-              )}
-            </div>
-          ))}
-        </SponsorsContainer>
+        <ReceptionsContainer>
+          {data.allSponsorsYaml.edges.map(
+            ({ node }) =>
+              node.isReception &&
+              node.sponsors && (
+                <SponsorList
+                  key={`sponsor-${slugify(node.level)}`}
+                  node={node}
+                />
+              )
+          )}
+        </ReceptionsContainer>
+        <TablesContainer>
+          {data.allSponsorsYaml.edges.map(
+            ({ node }) =>
+              !node.isReception &&
+              node.sponsors && (
+                <SponsorList
+                  key={`sponsor-${slugify(node.level)}`}
+                  node={node}
+                />
+              )
+          )}
+        </TablesContainer>
       </SectionContainer>
     </BackgroundContainer>
   );

@@ -1,16 +1,21 @@
 - level: VIP Reception
+  isReception: true
   sponsors:
 - level: General Reception
+  isReception: true
   sponsors:
 - level: Dessert Reception
+  isReception: true
   sponsors:
   - name: "H&R Block, Inc."
     link: "https://www.hrblock.com/"
 - level: Platinum
+  isReception: false
   sponsors:
   - name: "The Coca-Cola Company"
     link: "https://www.coca-colacompany.com/"
 - level: Gold
+  isReception: false
   sponsors:
   - name: "Aflac, Inc."
     link: "https://www.aflac.com/"
@@ -21,10 +26,12 @@
   - name: "Nareit"
     link: "https://www.reit.com/"
 - level: Silver
+  isReception: false
   sponsors:
   - name: "Wine Institute"
     link: "https://www.wineinstitute.org/"
 - level: Bronze
+  isReception: false
   sponsors:
   - name: "AbbVie Inc."
   - name: "AT&T"
