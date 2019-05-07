@@ -17,7 +17,7 @@ const Container = styled.div`
   @media (min-width: 860px) {
     grid-template-columns: repeat(2, 1fr);
 
-    & #reception-vip-reception {
+    & #reception-annual-dinner-reception-sponsor {
       grid-column: 1/3;
     }
   }
