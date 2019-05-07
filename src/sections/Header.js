@@ -110,6 +110,11 @@ const ListOfSections = [
     show: true,
   },
   {
+    name: 'Sponsors',
+    link: 'sponsors',
+    show: true,
+  },
+  {
     name: 'Previous Sponsors',
     link: 'previous',
     show: true,
@@ -127,7 +132,6 @@ const Header = () => {
   const [firstVisit, setFirstVisit] = useState(true);
 
   const goToSection = id => {
-    console.log(id);
     scrollToElement(document.getElementById(id), { offset: -54 });
   };
 

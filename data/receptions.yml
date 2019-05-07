@@ -1,3 +1,18 @@
+- name: Annual Dinner Reception Sponsor
+  price: 60000
+  bg: black
+  color: yellow
+  benefits:
+    - "Sole Sponsor of the 2019 Tax Prom Dinner Reception"
+    - "One Platinum large table (10 people) with premium seating"
+    - "10 tickets to the VIP Reception"
+    - "Namebadge ribbon recognizing sponsorship level"
+    - "Logo recognition as the Annual Dinner Reception Sponsor in the event program provided to all guests"
+    - "Elevated Branding Exposure at Dinner Reception"
+    - "Full page company sponsorship recognition spot in the event program provided to all guests"
+    - "Opportunity to Give a Toast at the commencement of the Dinner"
+    - "Recognition by name from the podium during dinner"
+    - "Opportunity to nominate Tax Prom King & Queen candidates"
 - name: VIP Reception
   price: 50000
   bg: black
@@ -29,4 +44,3 @@
     - "Full page customized company recognition spot in the event program provided to all guests"
     - "Recognition by name from the podium during dinner"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
-

@@ -28,16 +28,20 @@ const PreviousSponsorsContainer = styled.div`
       grid-column: span 4;
 
       h4 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
 
       li {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
 
     & div:nth-child(n + 4):nth-child(-n + 7) {
       grid-column: span 6;
+
+      li {
+        font-size: 0.9rem;
+      }
     }
   }
 `;
@@ -45,7 +49,7 @@ const PreviousSponsorsContainer = styled.div`
 const Heading = styled.h3`
   color: ${props => props.theme.yellow};
   font-family: ${props => props.theme.fontFamilies.lato};
-  font-size: 3rem;
+  font-size: calc(1rem + 3vw);
   font-style: normal;
   text-align: center;
   text-transform: uppercase;

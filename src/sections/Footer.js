@@ -75,10 +75,10 @@ const Footer = () => (
           <p>
             The Tax Foundation is a 501(c)(3) nonprofit educational
             organization, IRS EIN #52-1703065. We do not participate in any
-            lobbying. Your gift is tax-deductible to the extent allowed by law.
-            For purposes of congressional ethical rules, this dinner is a widely
-            attended event. For media credentials,{' '}
-            <Link to="/contact">please contact us</Link>.
+            lobbying. Per IRS rules, $459 of the individual ticket price may be
+            tax-deductible to the fullest extent of the law.For purposes of
+            congressional ethical rules, this dinner is a widely attended event.
+            For media credentials, <Link to="/contact">please contact us</Link>.
           </p>
         </Disclaimer>
       </FooterContent>
