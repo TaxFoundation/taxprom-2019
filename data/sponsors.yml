@@ -19,12 +19,16 @@
   sponsors:
   - name: "Aflac, Inc."
     link: "https://www.aflac.com/"
+  - name: "Allergan Plc"
+    link: "https://www.allergan.com/home"
   - name: "Altria Client Services LLC"
     link: "http://www.altria.com/Pages/default.aspx"
   - name: "Caterpillar Inc."
     link: "https://www.caterpillar.com/"
   - name: "Nareit"
     link: "https://www.reit.com/"
+  - name: "United Technologies Corporation"
+    link: "http://www.utc.com/Pages/Home.aspx"
 - level: Silver
   isReception: false
   sponsors:
@@ -33,6 +37,7 @@
 - level: Bronze
   isReception: false
   sponsors:
+  - name: "Abbott Laboratories"
   - name: "AbbVie Inc."
   - name: "AT&T"
   - name: "BakerHostetler"
