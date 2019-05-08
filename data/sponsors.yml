@@ -12,6 +12,8 @@
 - level: Platinum
   isReception: false
   sponsors:
+  - name: "Akin Gump Strauss Hauer & Feld LLP"
+    link: "https://www.akingump.com/en/"
   - name: "The Coca-Cola Company"
     link: "https://www.coca-colacompany.com/"
 - level: Gold
