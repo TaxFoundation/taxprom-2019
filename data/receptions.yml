@@ -13,22 +13,22 @@
     - "Opportunity to Give a Toast at the commencement of the Dinner"
     - "Recognition by name from the podium during dinner"
     - "Opportunity to nominate Tax Prom King & Queen candidates"
-- name: VIP Reception
-  price: 50000
-  bg: black
-  color: yellow
-  benefits:
-    - "Sole Sponsor of the 2019 Tax Prom VIP Reception"
-    - "Two Platinum large tables (20 people) with priority seating"
-    - "20 tickets to the VIP Reception"
-    - "Namebadge ribbon recognizing sponsorship level"
-    - "Logo recognition as the VIP Reception Sponsor in the event program provided to all guests"
-    - "Elevated Branding Exposure at VIP Reception"
-    - "Branded Napkins"
-    - "Full page company sponsorship recognition spot in the event program provided to all guests"
-    - "Opportunity to Give a Toast at the VIP Reception"
-    - "Recognition by name from the podium during dinner"
-    - "Opportunity to nominate Tax Prom King & Queen candidates"
+# - name: VIP Reception
+#   price: 50000
+#   bg: black
+#   color: yellow
+#   benefits:
+#     - "Sole Sponsor of the 2019 Tax Prom VIP Reception"
+#     - "Two Platinum large tables (20 people) with priority seating"
+#     - "20 tickets to the VIP Reception"
+#     - "Namebadge ribbon recognizing sponsorship level"
+#     - "Logo recognition as the VIP Reception Sponsor in the event program provided to all guests"
+#     - "Elevated Branding Exposure at VIP Reception"
+#     - "Branded Napkins"
+#     - "Full page company sponsorship recognition spot in the event program provided to all guests"
+#     - "Opportunity to Give a Toast at the VIP Reception"
+#     - "Recognition by name from the podium during dinner"
+#     - "Opportunity to nominate Tax Prom King & Queen candidates"
 - name: General Reception
   price: 40000
   bg: black
