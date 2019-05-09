@@ -2,7 +2,7 @@
   isReception: true
   sponsors:
   - name: "Business Roundtable"
-   link: "https://www.businessroundtable.org/"
+    link: "https://www.businessroundtable.org/"
 - level: General Reception
   isReception: true
   sponsors:
