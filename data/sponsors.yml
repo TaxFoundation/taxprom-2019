@@ -1,5 +1,7 @@
 - level: VIP Reception
- - name: "Business Roundtable"
+  isReception: true
+  sponsors:
+  - name: "Business Roundtable"
    link: "https://www.businessroundtable.org/"
 - level: General Reception
   isReception: true
