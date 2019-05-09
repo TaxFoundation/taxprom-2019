@@ -24,10 +24,10 @@ const ReceptionsContainer = styled.div`
   }
 
   @media screen and (min-width: 530px) {
-    grid-template: auto / repeat(3, 1fr);
-    & div {
-      grid-column: span 4;
+    grid-auto-flow: column;
+    margin-bottom: 2rem;
 
+    & div {
       h4 {
         font-size: 1.8rem;
       }
@@ -83,15 +83,13 @@ const SponsorList = ({ node }) => (
     <ul>
       {node.sponsors.map(sponsor =>
         sponsor.link ? (
-          <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
+          <li key={`sponsor-${slugify(sponsor.name)}`}>
             <a href={sponsor.link} rel="noopener noreferrer" target="_blank">
               {sponsor.name}
             </a>
           </li>
         ) : (
-          <li key={`previous-sponsor-${slugify(sponsor.name)}`}>
-            {sponsor.name}
-          </li>
+          <li key={`sponsor-${slugify(sponsor.name)}`}>{sponsor.name}</li>
         )
       )}
     </ul>
