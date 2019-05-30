@@ -38,6 +38,8 @@
 - level: Silver
   isReception: false
   sponsors:
+  - name: "Deloitte Tax LLP"
+    link: "https://www2.deloitte.com/us/en.html"
   - name: "Wine Institute"
     link: "https://www.wineinstitute.org/"
 - level: Bronze
