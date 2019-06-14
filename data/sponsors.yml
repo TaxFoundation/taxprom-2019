@@ -18,6 +18,8 @@
     link: "https://www.akingump.com/en/"
   - name: "The Coca-Cola Company"
     link: "https://www.coca-colacompany.com/"
+  - name: "EY"
+    link: "https://www.ey.com/en_us"  
 - level: Gold
   isReception: false
   sponsors:
