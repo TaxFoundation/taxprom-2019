@@ -5,7 +5,8 @@
     link: "https://www.businessroundtable.org/"
 - level: General Reception
   isReception: true
-  sponsors:
+  - name: "Intuit Inc."
+    link: "https://www.intuit.com/"
 - level: Dessert Reception
   isReception: true
   sponsors:
@@ -19,7 +20,9 @@
   - name: "The Coca-Cola Company"
     link: "https://www.coca-colacompany.com/"
   - name: "EY"
-    link: "https://www.ey.com/en_us"  
+    link: "https://www.ey.com/en_us"
+  - name: "Pwc"
+    link: "https://www.pwc.com/"  
 - level: Gold
   isReception: false
   sponsors:
