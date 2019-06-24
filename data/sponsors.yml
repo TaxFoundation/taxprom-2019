@@ -21,7 +21,7 @@
     link: "https://www.coca-colacompany.com/"
   - name: "EY"
     link: "https://www.ey.com/en_us"
-  - name: "Pwc"
+  - name: "PwC"
     link: "https://www.pwc.com/"  
 - level: Gold
   isReception: false
