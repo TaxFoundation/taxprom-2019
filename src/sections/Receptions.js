@@ -15,7 +15,8 @@ const Container = styled.div`
   padding-bottom: 1rem;
 
   @media (min-width: 860px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(2, 1fr); */
 
     /* & #reception-annual-dinner-reception-sponsor {
       grid-column: 1/3;
