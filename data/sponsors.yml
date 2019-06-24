@@ -5,6 +5,7 @@
     link: "https://www.businessroundtable.org/"
 - level: General Reception
   isReception: true
+  sponsors:
   - name: "Intuit Inc."
     link: "https://www.intuit.com/"
 - level: Dessert Reception
