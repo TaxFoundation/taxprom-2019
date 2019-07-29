@@ -46,6 +46,8 @@
 - level: Silver
   isReception: false
   sponsors:
+  - name: "The Carlyle Group"
+    link: "https://www.carlyle.com/"
   - name: "Deloitte Tax LLP"
     link: "https://www2.deloitte.com/us/en.html"
   - name: "KPMG LLP"
