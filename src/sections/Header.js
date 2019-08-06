@@ -115,7 +115,7 @@ const ListOfSections = [
     show: true,
   },
   {
-    name: 'Previous Sponsors',
+    name: 'Previous Awardees',
     link: 'previous',
     show: true,
   },
