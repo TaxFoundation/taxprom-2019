@@ -10,7 +10,7 @@ import Tables from '../sections/Tables';
 import Tickets from '../sections/Tickets';
 import PhotoGrid2 from '../sections/PhotoGrid2';
 import Sponsors from '../sections/Sponsors';
-import PreviousSponsors from '../sections/PreviousSponsors';
+import PreviousWinners from '../sections/PreviousWinners';
 import EventMap from '../sections/EventMap';
 import Footer from '../sections/Footer';
 
@@ -30,7 +30,7 @@ const IndexPage = () => (
     <Tickets />
     <PhotoGrid2 />
     <Sponsors />
-    <PreviousSponsors />
+    <PreviousWinners />
     <EventMap
       date={taxprom.date}
       time={taxprom.time}
