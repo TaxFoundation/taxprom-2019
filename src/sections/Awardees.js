@@ -9,7 +9,7 @@ import SectionContainer from '../components/SectionContainer';
 const Heading = styled.h2`
   color: ${props => props.theme.yellow};
   font-family: ${props => props.theme.fontFamilies.lato};
-  font-size: calc(2rem + 3vw);
+  font-size: calc(1rem + 3vw);
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
@@ -33,7 +33,7 @@ const Awardee = styled.div`
 `;
 
 const AwardeeHeading = styled.h3`
-  font-size: calc(1rem + 3vw);
+  font-size: calc(1rem + 2.6vw);
   padding-bottom: 2rem;
   text-align: center;
 `;
@@ -63,8 +63,8 @@ const Awardees = () => {
 
   return (
     <BackgroundContainer bg="black" id="awardees">
-      <Heading>Awardees</Heading>
       <SectionContainer>
+        <Heading>Tax Foundation’s Distinguished Service Awards</Heading>
         <AwardeeHeading>Thomas A. Barthold</AwardeeHeading>
         <Awardee>
           <AwardeeImg fluid={BartholdImg.BartholdImg.childImageSharp.fluid} />
