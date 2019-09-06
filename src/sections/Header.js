@@ -95,6 +95,11 @@ const ListOfSections = [
     show: true,
   },
   {
+    name: 'Awardees',
+    link: 'awardees',
+    show: true,
+  },
+  {
     name: 'Receptions',
     link: 'receptions',
     show: true,
