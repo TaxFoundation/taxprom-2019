@@ -95,7 +95,7 @@ const ListOfSections = [
     show: true,
   },
   {
-    name: 'Awardees',
+    name: 'Distinguished Service Awards',
     link: 'awardees',
     show: true,
   },
@@ -117,11 +117,6 @@ const ListOfSections = [
   {
     name: 'Sponsors',
     link: 'sponsors',
-    show: true,
-  },
-  {
-    name: 'Previous Awardees',
-    link: 'previous',
     show: true,
   },
   {

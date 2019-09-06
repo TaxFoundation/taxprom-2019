@@ -26,13 +26,12 @@ const IndexPage = () => (
     />
     <Details details={taxprom.details} id="details" />
     <Awardees />
-    {/* Awardees */}
+    <PreviousWinners />
     <Receptions />
     <Tables />
     <Tickets />
     <PhotoGrid2 />
     <Sponsors />
-    <PreviousWinners />
     <EventMap
       date={taxprom.date}
       time={taxprom.time}
