@@ -64,7 +64,7 @@ const Awardees = () => {
   return (
     <BackgroundContainer bg="black" id="awardees">
       <SectionContainer>
-        <Heading>Tax Foundation’s Distinguished Service Awards</Heading>
+        <Heading>Tax Foundation’s 2019 Distinguished Service Awardee</Heading>
         <AwardeeHeading>Thomas A. Barthold</AwardeeHeading>
         <Awardee>
           <AwardeeImg fluid={BartholdImg.BartholdImg.childImageSharp.fluid} />

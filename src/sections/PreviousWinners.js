@@ -43,7 +43,7 @@ const LinkText = styled.a`
 const PreviousSponsors = () => (
   <BackgroundContainer bg="black" id="previous">
     <SectionContainer>
-      <Heading>Previous Award Winners</Heading>
+      <Heading>Previous Awardees</Heading>
       <WinnersText>
         <p>
           Since 1941, the Tax Foundation has honored public figures who show an
