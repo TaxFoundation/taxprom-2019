@@ -102,7 +102,7 @@ const ListOfSections = [
   {
     name: 'Receptions',
     link: 'receptions',
-    show: true,
+    show: false,
   },
   {
     name: 'Tables',

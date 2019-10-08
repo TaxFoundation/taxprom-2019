@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 import Splash from '../sections/Splash';
 import Details from '../sections/Details';
 import Awardees from '../sections/Awardees';
-import Receptions from '../sections/Receptions';
+// import Receptions from '../sections/Receptions';
 import Tables from '../sections/Tables';
 import Tickets from '../sections/Tickets';
 import PhotoGrid2 from '../sections/PhotoGrid2';
@@ -27,7 +27,7 @@ const IndexPage = () => (
     <Details details={taxprom.details} id="details" />
     <Awardees />
     <PreviousWinners />
-    <Receptions />
+    {/* <Receptions /> */}
     <Tables />
     <Tickets />
     <PhotoGrid2 />
