@@ -1,7 +1,7 @@
 - name: Platinum
   earlyPrice: 25000
   regularPrice: 30000
-  latePrice: 35000
+  latePrice: 30000
   bg: blueLight
   color: blueDark
   benefits:
@@ -18,7 +18,7 @@
 - name: Gold
   earlyPrice: 15000
   regularPrice: 20000
-  latePrice: 22000
+  latePrice: 20000
   bg: yellow
   color: blueDark
   benefits:
@@ -34,7 +34,7 @@
 - name: Silver
   earlyPrice: 12000
   regularPrice: 15000
-  latePrice: 18000
+  latePrice: 15000
   bg: blue
   color: white
   benefits:
