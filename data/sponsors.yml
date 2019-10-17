@@ -55,7 +55,9 @@
   isReception: false
   sponsors:
   - name: "Baker McKenzie"
-    link: "https://www.bakermckenzie.com/en"  
+    link: "https://www.bakermckenzie.com/en" 
+  - name: "The Boeing Company"
+    link: "https://www.boeing.com/" 
   - name: "Capitol Counsel"
     link: "http://www.capitolcounsel.com/"
   - name: "The Carlyle Group"
