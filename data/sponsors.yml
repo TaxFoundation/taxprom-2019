@@ -26,8 +26,10 @@
     link: "https://www.emerson.com/en-us"  
   - name: "EY"
     link: "https://www.ey.com/en_us"
+  - name: "PepsiCo, Inc."
+    link: "https://www.pepsico.com/" 
   - name: "PwC"
-    link: "https://www.pwc.com/"
+    link: "https://www.pwc.com/" 
 - level: Gold
   isReception: false
   sponsors:
