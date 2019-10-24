@@ -56,6 +56,8 @@
 - level: Silver
   isReception: false
   sponsors:
+  - name: "Atlas Network"
+    link: "https://www.atlasnetwork.org/" 
   - name: "Baker McKenzie"
     link: "https://www.bakermckenzie.com/en" 
   - name: "The Boeing Company"
