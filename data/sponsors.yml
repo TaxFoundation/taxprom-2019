@@ -51,6 +51,8 @@
     link: "https://www.reit.com/"
   - name: "Pfizer Inc."
     link: "https://www.pfizer.com/"
+  - name: "Squire Patton Boggs"
+    link: "https://www.squirepattonboggs.com/en"
   - name: "United Technologies Corporation"
     link: "http://www.utc.com/Pages/Home.aspx"
 - level: Silver
@@ -92,6 +94,7 @@
   - name: "Federal Policy Group"
   - name: "HP Inc."
   - name: "Horizon Therapeutics USA, Inc."
+  - name: "InterDigital, Inc."
   - name: "Iron Mountain Inc."
   - name: "Lockheed Martin Corporation"
   - name: "MassMutual"
