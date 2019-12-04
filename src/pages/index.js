@@ -28,10 +28,10 @@ const IndexPage = () => (
     <Awardees />
     <PreviousWinners />
     {/* <Receptions /> */}
-    <Tables />
-    <Tickets />
+    {/* <Tables />
+    <Tickets /> */}
     <PhotoGrid2 />
-    <Sponsors />
+    {/* <Sponsors />
     <EventMap
       date={taxprom.date}
       time={taxprom.time}
@@ -42,7 +42,7 @@ const IndexPage = () => (
       state={taxprom.state}
       zip={taxprom.zip}
       url={taxprom.map}
-    />
+    /> */}
     <Footer />
   </Layout>
 );

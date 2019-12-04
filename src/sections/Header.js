@@ -107,17 +107,17 @@ const ListOfSections = [
   {
     name: 'Tables',
     link: 'tables',
-    show: true,
+    show: false,
   },
   {
     name: 'Tickets',
     link: 'tickets',
-    show: true,
+    show: false,
   },
   {
     name: 'Sponsors',
     link: 'sponsors',
-    show: true,
+    show: false,
   },
   {
     name: 'Venue',
