@@ -1,5 +1,7 @@
 https://taxprom-2019.netlify.com/* https://taxprom.com/:splat 301!
-http://taxprom.com/* https://taxfoundation.org/events/tax-prom-2020/:splat 301!
-https://taxprom.com/* https://taxfoundation.org/events/tax-prom-2020/:splat 301!
-http://www.taxprom.com/* https://taxfoundation.org/events/tax-prom-2020/:splat 301!
-https://www.taxprom.com/* https://taxfoundation.org/events/tax-prom-2020/:splat 301!
+http://taxprom.com/* https://taxfoundation.org/tax-prom-2020/:splat 301!
+https://taxprom.com/* https://taxfoundation.org/tax-prom-2020/:splat 301!
+http://www.taxprom.com/* https://taxfoundation.org/tax-prom-2020/:splat 301!
+https://www.taxprom.com/* https://taxfoundation.org/tax-prom-2020/:splat 301!
+http://2020.taxprom.com/* https://taxfoundation.org/tax-prom-2020/:splat 301!
+https://2020.taxprom.com/* https://taxfoundation.org/tax-prom-2020/:splat 301!
